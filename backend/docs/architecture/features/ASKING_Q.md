@@ -21,7 +21,8 @@ LedgerLens answers complex financial questions across single reports or multiple
          └── Out of Scope / General Conversational
       │
       ▼
-2. Hybrid Retrieval Engine (Neon pgvector + Full-Text Search)
+2. Hybrid Retrieval Engine (chroma db + Full-Text Search)
+   |__ BM25  based retrieval
    ├── Multi-tenant query: WHERE user_id = :user_id AND doc_id IN (:doc_ids)
    ├── Vector Similarity Search: Cosine distance on chunk embeddings
    ├── Lexical / Keyword Filter: Exact match for financial terms, item headers, and year numbers
@@ -50,7 +51,7 @@ LedgerLens answers complex financial questions across single reports or multiple
 ## 2. Tools Available to the Agent
 
 ### Tool 1: `retrieval_tool`
-- **Purpose:** Fetches relevant context chunks from Neon DB using hybrid search.
+- **Purpose:** Fetches relevant context chunks from chroma DB using hybrid search.
 - **Inputs:** `query` (str), `doc_ids` (List[str]), `page_hint` (Optional[int]).
 - **Outputs:** List of chunks containing `content`, `page_number`, `bbox`, and `table_metadata`.
 
