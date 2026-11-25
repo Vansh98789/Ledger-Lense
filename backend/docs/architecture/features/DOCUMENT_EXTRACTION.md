@@ -1,114 +1,87 @@
-# DOCUMENT EXTRACTION ARCHITECTURE
-====================================================
+# Document Extraction
 
-## Objectives
-Financial filings (10-K, 10-Q, annual reports) contain dense narrative text, multi-column disclosures, complex multi-line tables, charts, and sometimes scanned legacy pages. 
-
-The extraction pipeline must convert raw PDFs into high-fidelity structured chunks while **preserving bounding box coordinates (`bbox: [x0, y0, x1, y1]`) and cell references** for exact citation highlighting.
+Converts raw financial PDFs into structured, typed items — each with `page_number`, `bbox`, `content`, and `metadata`.
 
 ---
 
-## 1. Input Types & Tooling Strategy
+## Tools Used
 
-| Content Type | Primary Tool | Fallback / Alternative | Purpose & Details |
-| :--- | :--- | :--- | :--- |
-| **Typed Text & Layout** | `PyMuPDF` (`fitz`) | `pdfplumber` | Fast native text extraction with precise word/line coordinates, reading order reconstruction, and font size metadata (to detect headings). |
-| **Multi-Column Text** | `PyMuPDF` (layout blocks) | `Docling` / `pdfplumber` | Resolves multi-column financial layouts into correct reading order without interleaving adjacent columns (handled in text file only). |
-| **Digital Financial Tables** | `pdfplumber` / `Camelot` | Vision Language Model (VLM) | Extracts bordered/borderless tables into structured 2D matrices (Markdown/CSV/JSON), preserving row headers and column hierarchy. |
-| **Scanned Pages & OCR** | `Tesseract OCR` / `PyMuPDF` OCR | Cloud VLM (e.g. Gemini Flash) | Detects pages without embedded text streams and runs OCR to extract text + word bounding boxes. |
-| **Charts, Figures & Scanned Tables** | Vision Language Model (VLM) | Multimodal API | Converts visual bar charts, pie charts, and visual tables into structured text summaries and JSON tables. |
-| **Document Links & References**| `PyMuPDF` (`page.get_links()`) | Built-in PDF parser | Extracts native cross-references, internal footnotes, and external regulatory URLs. |
-
----
-
-## 2. Extraction Pipeline Execution Details
-
-### Step 0: Page Classification & Layout Inspection
-For each page in the PDF:
-1. **Text Density Check:**
-   - Use `PyMuPDF` to inspect text length and character stream.
-   - If character count < threshold (e.g. < 50 characters on a full page), classify as **Scanned Page** and route to OCR/VLM.
-2. **Table & Graphic Region Detection:**
-   - Detect table bounding boxes using `pdfplumber` or `Camelot` (lattice/stream heuristics).
-   - Non-table regions are marked as **Narrative Text**.
+| Content | Tool | Reason |
+|---|---|---|
+| Text & layout | PyMuPDF (`fitz`) | Fast, native coordinates, reading order |
+| Tables | PyMuPDF `page.find_tables()` | Faster than Camelot, no Ghostscript needed, better borderless table support |
+| Charts & figures | Groq VLM (vision) | Only tool that can interpret visual data |
+| Scanned pages | Tesseract → Groq VLM fallback | Tesseract for speed; VLM when confidence < 65% |
+| Images | Groq VLM (vision) | Classification + text transcription |
 
 ---
 
-### Step 1: text extractor 
-   Find Page Width & Layout:
-   It divides the page vertically down the middle (left half vs right half).
+## Page-by-Page Flow (`extract_data.py`)
 
-   Detect Full-Width Headers:
-   Any header spanning across the page (like "Item 7. MD&A") is kept at the top as a section divider.
+For every page:
 
-   Sort Columns Top-to-Bottom:
+1. **Scanned check** — `is_scanned_page()`: word count < 50 → route to OCR
+2. **If digital:**
+   - Extract tables → charts → images (collect their bboxes as `ignore_rects`)
+   - Extract text, skipping anything inside `ignore_rects` (prevents duplicates)
+3. **If scanned:** Tesseract OCR → if avg confidence < 65% → VLM fallback for the full page
 
-   It takes all text on the left half and sorts it top 
-   →
-   → bottom.
-   Then it takes all text on the right half and sorts it top 
-   →
-   → bottom.
-   This guarantees Column 1 is read completely before Column 2 starts (no jumbled "Z-reading").
-
-   Filter Out Tables & Attach BBoxes:
-
-   It checks if any text block falls inside a table rectangle (ignore_rects). If yes, it skips it (to prevent duplicates).
-   For every remaining paragraph, it saves { "text": ..., "page_number": ..., "bbox": [x0, y0, x1, y1] } for citation highlighting.
-
----
-
-### Step 2: Structured Table Extraction & Cell Mapping
-Financial tables require cell-level coordinates so citations can point to specific numbers:
-Find Table Boundaries:
-Uses page.find_tables() to detect grids and whitespace-aligned columns, recording the whole table's bounding box bbox: [x0, y0, x1, y1].
-
-Validate (Financial Check):
-Runs is_valid_financial_table():
-
-Rejects false tables (e.g., long prose columns with >35 words per cell).
-Ensures real financial numbers exist (requires numbers, $, or %).
-
-Format for AI (Markdown):
-Converts 2D table cells into a clean Markdown table (| Metric | 2023 | ... |) so LLMs and embeddings understand the relationships easily.
-
-Map Every Cell (For Citations):
-Tags each data point with its row name, column name, and value (e.g., Row: "Total net sales", Col: "2023", Val: "$383,285"), enabling clickable cell-level citations.
-4. use pymypdf ove camelot because:
-   -Speed (10x – 50x Difference)
-   -Camelot Struggles with Borderless Tables
-   -Camelot Requires Ghostscript (Deployment & Docker Headache)
-   -Bounding Box & Coordinate Mismatch
+Each extracted item has:
+```json
+{
+  "type": "text | table | chart | image | scanned_text",
+  "page_number": 1,
+  "bbox": [x0, y0, x1, y1],
+  "content": "...",
+  "metadata": {}
+}
+```
 
 ---
 
-### Step 3: Text Chunking with Layout Awareness
-Traditional character-based naive chunking destroys financial context. We use **Layout-Aware Chunking**:
-1. **Header-Aware Splitting:** Split text at structural boundaries (Item 1, Item 7 - MD&A, Financial Statements, Notes to Consolidated Financial Statements).
-2. **Self-Contained Chunks:** Keep subsections together with their parent heading injected into the chunk metadata (e.g., `Section: Liquidity and Capital Resources > Note 3: Revenue Recognition`).
-3. **Chunk Overlap & Coordinate Preservation:**
-   - Maximum chunk size: ~500 to 1,000 tokens.
-   - Overlap: ~100 tokens.
-   - Every chunk retains its starting page, ending page, and bounding box union for highlighting.
+## Extractor Details
+
+### Text (`text_extract.py`)
+- Splits page at midpoint → left column read top→bottom, then right column
+- Full-width blocks (> 65% page width) treated as section headers
+- Skips any block overlapping a table/chart/image bbox
+
+### Tables (`table_extract.py`)
+- `page.find_tables()` detects grid + borderless tables
+- `is_valid_financial_table()` rejects false positives:
+  - Any cell with > 35 words → not a table (it's prose)
+  - < 15% numeric cell density → not a financial table
+- Output: Markdown table + cell metadata (row label, col header, value)
+
+### Charts (`chart_extractor.py`)
+- Detects vector drawing clusters + raster image rects
+- Crops region → sends image bytes to VLM with `vlm_chart_v1.txt` prompt
+- VLM returns: markdown table of data points + plain-text summary
+
+### Images (`image_extract.py`)
+- Filters out images < 100×100px (icons/logos)
+- VLM with `vlm_image_v1.txt`: classifies type, transcribes text, explains relevance
+
+### Scanned OCR (`scan_ocr_extract.py`)
+- Tesseract returns per-word confidence (0–100)
+- If avg confidence < 65% → `_call_vlm_for_page()` with `vlm_ocr_v1.txt`
 
 ---
 
-## 3. Storage Schema in Neon PostgreSQL (`pgvector`)
-
-Each chunk is stored with rich metadata to empower the retrieval and citation system:
+## Storage Schema (Neon PostgreSQL + pgvector)
 
 ```sql
 CREATE TABLE document_chunks (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    doc_id UUID NOT NULL REFERENCES documents(id) ON DELETE CASCADE,
-    user_id UUID NOT NULL,
-    chunk_type VARCHAR(20) NOT NULL, -- 'text', 'table', 'chart'
+    id          UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    doc_id      UUID NOT NULL REFERENCES documents(id) ON DELETE CASCADE,
+    user_id     UUID NOT NULL,
+    chunk_type  VARCHAR(20) NOT NULL,   -- text | table | chart | image | scanned_text
     page_number INTEGER NOT NULL,
-    bbox JSONB NOT NULL,             -- {"x0": 54.2, "y0": 120.5, "x1": 500.1, "y1": 210.3}
-    table_metadata JSONB,           -- {"table_id": "T1", "row": 4, "col": 2, "header": "Revenue"}
-    content TEXT NOT NULL,          -- Markdown table or text passage
-    embedding VECTOR(1536),         -- pgvector embedding
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+    bbox        JSONB NOT NULL,         -- [x0, y0, x1, y1]
+    metadata    JSONB,                  -- row/col refs, confidence, table_id, etc.
+    content     TEXT NOT NULL,
+    embedding   VECTOR(1536),
+    created_at  TIMESTAMPTZ DEFAULT NOW()
 );
 
 CREATE INDEX ON document_chunks USING hnsw (embedding vector_cosine_ops);

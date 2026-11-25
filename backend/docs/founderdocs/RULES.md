@@ -1,22 +1,36 @@
-Hand-code vs AI: the split
+# Rules — What You Write vs What AI Writes
 
-Rule: you design and write the parts that make the project unique. AI writes the parts nobody will ask you about. Roughly 40% you, 60% AI-assisted.
+**Principle:** You write the parts that make this project yours. AI writes the boilerplate. Roughly 40% you, 60% AI-assisted.
 
-Part	Who writes it	Why
-Architecture, data flow, feature order	You, on paper	This is what interviewers ask about
-Chunking and table-aware splitting	You write, AI critiques	Core to retrieval quality
-Retrieval logic (hybrid search, reranking)	You write the first version, AI helps improve	You must explain why it works
-Calculation tool (the math runs in code)	You	This is the "verifiable" part
-Verification and cross-check logic	You	Your signature feature
-Eval set and scoring script	You write the questions and answers. AI can help write the runner	The test set must be yours
-Error analysis and fixes	You	The part that proves you understand
-FastAPI boilerplate, DB setup, config	AI	Boilerplate
-Frontend (React UI, styling, streaming)	AI, you review	Quick to check visually
-Dockerfile, deployment config	AI, you read it	Understand, but don't memorize
-Tests, README polish	AI drafts, you edit and add real numbers	Keep your own voice
+---
 
-How to use AI on the parts you write: write the first version yourself, then ask the AI "what's weak here and why?" Read every diff, and commit after each feature.
+## Ownership Split
 
-What to focus on first: evals and a thin working version, not the UI
+| Part | Owner | Why |
+|---|---|---|
+| Architecture, data flow, feature order | You | Interviewers ask about this |
+| Chunking & table-aware splitting | You write, AI critiques | Core to retrieval quality |
+| Retrieval logic (hybrid search, reranking) | You write first version, AI improves | You must explain why it works |
+| Calculation tool (math runs in code) | You | The "verifiable" differentiator |
+| Verification & cross-check logic | You | Your signature feature |
+| Eval set & scoring script | You write questions/answers, AI writes runner | Test set must be yours |
+| Error analysis & fixes | You | Proves you understand the system |
+| FastAPI boilerplate, DB setup, config | AI | Nobody asks about this |
+| Frontend (React, styling, streaming) | AI, you review | Quick to check visually |
+| Dockerfile, deployment config | AI, you read it | Understand, don't memorize |
+| Tests, README polish | AI drafts, you edit | Keep your voice |
 
-Most people start with the interface and finish with a pretty demo that doesn't
+---
+
+## How to Use AI on Parts You Write
+
+Write the first version yourself, then ask: **"What's weak here and why?"**
+Read every diff. Commit after each feature.
+
+---
+
+## Priority Order
+
+**Ship this first:** evals + a thin working version end-to-end. Not the UI.
+
+Most people build the interface first and end up with a pretty demo that breaks on real questions. Evals first means you know when it actually works.

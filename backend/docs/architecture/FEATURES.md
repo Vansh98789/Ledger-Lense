@@ -1,68 +1,52 @@
+# LedgerLens — Features
 
+---
 
-LedgerLens: full feature list
+## Must Ship (Core)
 
-1. Documents
+### 1. Document Upload & Processing
+- Upload financial PDFs (10-K, 10-Q, annual reports)
+- Handles text, tables, charts, scanned pages (OCR)
+- Background processing with status: `QUEUED → EXTRACTING → INDEXING → COMPLETED`
+- Each user sees only their own documents
 
-Upload annual reports and filings (PDF), or pick from a small library of sample reports
-Handles text pages, tables, charts, and scanned pages (OCR)
-Processing runs in the background with a progress status
-Each user sees only their own documents
+### 2. Chat / Q&A
+- Streaming chat interface
+- Single doc or multi-doc comparison (e.g. 3 years)
+- Follow-up questions with conversation memory
+- Returns "Not found in the document" instead of guessing
 
-2. Asking questions
+### 3. Verifiable Answers
+- Every number links to: page, table, cell
+- Calculations (margin, growth, ratios) run in code — formula shown to user
+- Confidence indicator per answer (`HIGH / MEDIUM / LOW / NOT_FOUND`)
 
-Chat interface with streaming answers
-Questions across one report or several (for example, comparing 3 years)
-Follow-up questions that remember the conversation
-Says "not found in the document" instead of guessing
+### 4. Evals
+- 100+ question test set with known answers
+- One command reruns the eval and reports accuracy + retrieval hit rate
+- Automatic regression check — catches drops before they ship
 
-3. Answers you can verify
+---
 
-Every number links to its source: page, table, and cell
-Click a citation to see the original page highlighted
-Calculations (margins, growth, ratios) run in code, and the formula is shown
-A confidence indicator on each answer
+## Strong Additions
 
-4. Self-checking
+### 5. Self-Checking
+- Cross-checks numbers across sections (e.g. Net Income in P&L vs Cash Flow)
+- Flags restated figures, unit mismatches, totals that don't add up
 
-Cross-checks numbers across sections and years
-Flags inconsistencies, such as totals that don't match, unit mismatches, or restated figures
+### 6. Reliability
+- Retries, timeouts, clean error messages
+- Cost and latency logged per request
 
-5. Quality and evals
+### 7. Security
+- Per-user data isolation (all queries scoped by `user_id`)
+- API keys out of code (`.env` only)
+- Prompt injection protection
 
-Test set of 100+ questions with known answers
-One command or button reruns the eval and shows accuracy and retrieval hit rate
-Failure breakdown by type (scanned tables, multi-year, "not in document")
-Automatic regression check, so changes that lower the score are caught
-Dashboard with score history
+---
 
-6. Reliability and cost
-
-Retries, timeouts, and clean error messages
-Caching of repeated questions
-Cost and latency logged for every request
-Admin view: cost per question, slow queries, failed runs
-
-7. Security
-
-Login and per-user data separation
-Protection against prompt injection in uploaded documents
-API keys kept out of code
-
-8. Product basics
-
-Thumbs up/down and "report wrong answer" on each response
-Export an answer as a short summary with citations
-Disclaimer: not financial advice, check the source page
-
-9. Engineering
-
-Dockerized, deployed live with a public link
-README with architecture diagram, 5 key design decisions, eval results, and failure analysis
-Short demo video
-
-Build order and cut line
-
-Core (must ship): sections 1, 2, 3 (citations and calculations), 5 (evals), and the deploy part of 9
-Strong additions: section 4, section 6, and section 7
-Stretch (only if time allows): the clickable highlighted page, export, admin dashboard, and multi-document comparison
+## Stretch (Only If Time)
+- Clickable PDF page with highlight overlay
+- Export answer as summary with citations
+- Admin dashboard (cost per query, slow queries, failures)
+- Multi-document comparison UI

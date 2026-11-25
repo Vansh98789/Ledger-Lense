@@ -1,18 +1,3 @@
-"""
-Main extraction orchestrator for LedgerLens.
-Orchestrates the complete document extraction pipeline per page:
-1. Opens PDF (filepath or bytes) with PyMuPDF.
-2. Checks word count:
-   - If < threshold (default: 50 words) -> routes page to OCR/VLM pipeline (scan_ocr_extract.py).
-   - If >= threshold -> routes to digital pipeline:
-       a. Extract Tables (table_extract.py)
-       b. Extract Charts (chart_extractor.py)
-       c. Extract Embedded Images (image_extract.py)
-       d. Aggregate all table, chart, and image bounding boxes as ignore_rects
-       e. Extract narrative Text blocks outside ignore_rects (text_extract.py)
-3. Returns unified, coordinate-preserved structured data ready for chunking and pgvector indexing.
-"""
-
 from typing import List, Dict, Any, Union
 import pymupdf
 
