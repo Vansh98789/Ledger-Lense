@@ -1,5 +1,6 @@
 # extract data from pdf --> clean data --> chunk it --> embedd it --> store it in vector db
 from extract_data import extract_data
+from chunking import chunk_document_items
 from typing import Union
 
 
@@ -14,3 +15,6 @@ from typing import Union
 
 def ingestion(pdf_source: Union[str, bytes, bytearray]):
     data = extract_data(pdf_source)
+    # deduplicate the  data-- data cleaning
+
+    chunks = chunk_document_items(data)
