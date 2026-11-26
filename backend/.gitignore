@@ -11,3 +11,16 @@ wheels/
 
 # environment file 
 .env
+
+# SQLite dev database
+ledgerlens.db
+
+# ChromaDB local vector store
+chroma_db/
+
+# Uploaded PDFs and debug output
+app/data/uploads/
+debug/
+
+# Founder docs (private)
+docs/founderdocs/
