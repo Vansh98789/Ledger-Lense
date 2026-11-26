@@ -68,7 +68,7 @@ Each extracted item has:
 
 ---
 
-## Storage Schema (Neon PostgreSQL + pgvector)
+## Storage Schema (chroma db )
 
 ```sql
 CREATE TABLE document_chunks (
@@ -80,7 +80,7 @@ CREATE TABLE document_chunks (
     bbox        JSONB NOT NULL,         -- [x0, y0, x1, y1]
     metadata    JSONB,                  -- row/col refs, confidence, table_id, etc.
     content     TEXT NOT NULL,
-    embedding   VECTOR(1536),
+    embedding   VECTOR(384),
     created_at  TIMESTAMPTZ DEFAULT NOW()
 );
 

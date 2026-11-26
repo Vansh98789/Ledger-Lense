@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+*.egg-info/
+
+# Env
+.env
+.env.*
+
+# Debug output (local only)
+backend/debug/
+backend/chroma_db/
+
+# Test PDFs (can be large, potentially proprietary)
+backend/data/*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
