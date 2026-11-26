@@ -13,6 +13,7 @@ __pycache__/
 # Debug output (local only)
 backend/debug/
 backend/chroma_db/
+backend/docs/founderdocs/
 
 # Test PDFs (can be large, potentially proprietary)
 backend/data/*.pdf
