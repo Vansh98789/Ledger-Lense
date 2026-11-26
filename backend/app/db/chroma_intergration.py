@@ -88,6 +88,41 @@ def upsert_chunks(
     return total
 
 
+def _build_where_filter(
+    user_id: str, doc_ids: Optional[List[str]] = None
+) -> Dict[str, Any]:
+    """Build multi-tenant Chroma metadata filter."""
+    if doc_ids:
+        return {
+            "$and": [
+                {"user_id": str(user_id)},
+                {"doc_id": {"$in": [str(d) for d in doc_ids]}},
+            ]
+        }
+    return {"user_id": str(user_id)}
+
+
+def _format_chunk(
+    chunk_id: str,
+    content: str,
+    meta: Dict[str, Any],
+    score: Optional[float] = None,
+) -> Dict[str, Any]:
+    """Normalize a Chroma record into the shared chunk dict format."""
+    item: Dict[str, Any] = {
+        "id": chunk_id,
+        "doc_id": meta.get("doc_id"),
+        "chunk_type": meta.get("chunk_type"),
+        "page_number": meta.get("page_number"),
+        "bbox": json.loads(meta.get("bbox", "[]")),
+        "metadata": json.loads(meta.get("metadata", "{}")),
+        "content": content,
+    }
+    if score is not None:
+        item["score"] = score
+    return item
+
+
 # for retrieval
 def query_chunks(
     query_embedding: List[float],
@@ -98,16 +133,7 @@ def query_chunks(
 ) -> List[Dict[str, Any]]:
     """Query top-k chunks scoped strictly to user_id (and optional doc_ids)."""
     collection = get_collection(collection_name)
-
-    if doc_ids:
-        where_filter: Dict[str, Any] = {
-            "$and": [
-                {"user_id": str(user_id)},
-                {"doc_id": {"$in": [str(d) for d in doc_ids]}},
-            ]
-        }
-    else:
-        where_filter = {"user_id": str(user_id)}
+    where_filter = _build_where_filter(user_id, doc_ids)
 
     results = collection.query(
         query_embeddings=[query_embedding],
@@ -121,22 +147,34 @@ def query_chunks(
     metas = results.get("metadatas", [[]])[0]
     dists = results.get("distances", [[]])[0]
 
-    hits: List[Dict[str, Any]] = []
-    for chunk_id, content, meta, dist in zip(ids, docs, metas, dists):
-        hits.append(
-            {
-                "id": chunk_id,
-                "doc_id": meta.get("doc_id"),
-                "chunk_type": meta.get("chunk_type"),
-                "page_number": meta.get("page_number"),
-                "bbox": json.loads(meta.get("bbox", "[]")),
-                "metadata": json.loads(meta.get("metadata", "{}")),
-                "content": content,
-                "score": round(1.0 - float(dist), 4),
-            }
-        )
+    return [
+        _format_chunk(chunk_id, content, meta, score=round(1.0 - float(dist), 4))
+        for chunk_id, content, meta, dist in zip(ids, docs, metas, dists)
+    ]
 
-    return hits
+
+# fetching for bm25
+def fetch_chunks_by_filter(
+    user_id: str,
+    doc_ids: Optional[List[str]] = None,
+    collection_name: str = DEFAULT_COLLECTION,
+) -> List[Dict[str, Any]]:
+    collection = get_collection(collection_name)
+    where_filter = _build_where_filter(user_id, doc_ids)
+
+    results = collection.get(
+        where=where_filter,
+        include=["documents", "metadatas"],
+    )
+
+    ids = results.get("ids", [])
+    docs = results.get("documents", [])
+    metas = results.get("metadatas", [])
+
+    return [
+        _format_chunk(chunk_id, content, meta)
+        for chunk_id, content, meta in zip(ids, docs, metas)
+    ]
 
 
 def delete_document_chunks(
