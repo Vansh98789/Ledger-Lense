@@ -57,11 +57,11 @@ All persistent state lives in **PostgreSQL (Neon in prod / SQLite locally)** via
 
 ### Runtime Flow (`POST /api/chat/`)
 
-1. **Load context:** Fetch `session.summary` + **last 5** `chat_messages`.
+1. **Load context:** Fetch `session.summary` + all `chat_messages` after `session.last_summarized_at`.
 2. **Gateway (`not_need_retreival`):** Decide if docs are needed using query + recent context.
 3. **Query Rewrite (if docs needed):** Condense follow-ups (e.g. *"What about Q3?"* → *"What was Q3 revenue?"*) before calling `retrieve()`.
 4. **Generate & Save:** Return answer, save both user + assistant messages to `chat_messages`.
-5. **Background Summarization:** Run in `BackgroundTasks` (never blocks response) only when **unsummarized messages ≥ 6** — folds older messages into `session.summary` and updates `last_summarized_at`.
+5. **Background Summarization:** Run in `BackgroundTasks` (never blocks response) whenever **unsummarized messages > 5** — folds older messages into `session.summary` (keeping latest 5 exact) and updates `last_summarized_at`.
 
 ### Routes
 - `GET /api/chat/history` → returns full raw `chat_messages` for UI scrollback.

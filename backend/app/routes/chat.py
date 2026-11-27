@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/chat", tags=["chat"])
 
 RECENT_WINDOW = 5
-SUMMARIZE_THRESHOLD = 6
+SUMMARIZE_THRESHOLD = 1
 
 
 class ChatRequest(BaseModel):
@@ -138,13 +138,10 @@ def chat(
 
     session = _get_or_create_session(db, user_id)
 
-    recent = (
-        db.query(ChatMessage)
-        .filter(ChatMessage.session_id == session.id)
-        .order_by(ChatMessage.created_at.desc())
-        .limit(RECENT_WINDOW)
-        .all()
-    )[::-1]
+    msg_query = db.query(ChatMessage).filter(ChatMessage.session_id == session.id)
+    if session.last_summarized_at is not None:
+        msg_query = msg_query.filter(ChatMessage.created_at > session.last_summarized_at)
+    recent = msg_query.order_by(ChatMessage.created_at.asc()).all()
     history = [{"role": m.role, "content": m.content} for m in recent]
 
     result: Dict[str, Any] = answer_question(
