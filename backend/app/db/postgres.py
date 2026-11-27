@@ -43,11 +43,52 @@ class Document(Base):
     __tablename__ = "documents"
 
     id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
-    user_id = Column(String(36), ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
+    user_id = Column(
+        String(36),
+        ForeignKey("users.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
     filename = Column(String(255), nullable=False)
     storage_key = Column(Text, nullable=False)
     status = Column(String(20), nullable=False, default="QUEUED")
     error_message = Column(Text, nullable=True)
+    created_at = Column(DateTime(timezone=True), default=_utcnow, nullable=False)
+
+
+class ChatSession(Base):
+    __tablename__ = "chat_sessions"
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    user_id = Column(
+        String(36),
+        ForeignKey("users.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
+    summary = Column(Text, nullable=True)
+    last_summarized_at = Column(DateTime(timezone=True), nullable=True)
+    created_at = Column(DateTime(timezone=True), default=_utcnow, nullable=False)
+
+
+class ChatMessage(Base):
+    __tablename__ = "chat_messages"
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    session_id = Column(
+        String(36),
+        ForeignKey("chat_sessions.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
+    user_id = Column(
+        String(36),
+        ForeignKey("users.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
+    role = Column(String(20), nullable=False)  # "user" | "assistant"
+    content = Column(Text, nullable=False)
+    confidence = Column(String(20), nullable=True)
+    citations = Column(Text, nullable=True)  # json.dumps(citations)
     created_at = Column(DateTime(timezone=True), default=_utcnow, nullable=False)
 
 
@@ -57,7 +98,6 @@ def init_db() -> None:
 
 
 def get_db() -> Generator[Session, None, None]:
-    """Yield a SQLAlchemy session and close it after the request."""
     db = SessionLocal()
     try:
         yield db

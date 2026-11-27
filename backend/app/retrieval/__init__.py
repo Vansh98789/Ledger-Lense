@@ -5,6 +5,7 @@ from app.retrieval.generator import (
     generate_answer,
     not_need_retreival,
     conversation_answer,
+    rewrite_query_with_history,
 )
 from app.retrieval.hybrid import hybrid_search
 from app.retrieval.reranker import rerank_chunks
@@ -35,6 +36,8 @@ def answer_question(
     query: str,
     user_id: str,
     doc_ids: Optional[List[str]] = None,
+    summary: Optional[str] = None,
+    history: Optional[List[Dict[str, str]]] = None,
     vector_k: int = 10,
     bm25_k: int = 10,
     top_k: int = 5,
@@ -42,11 +45,12 @@ def answer_question(
     prompt_version: str = "v1",
 ) -> Dict[str, Any]:
 
-    if not_need_retreival(query, prompt_version=prompt_version):
-        return conversation_answer(query, prompt_version=prompt_version)
+    if not_need_retreival(query, prompt_version=prompt_version, summary=summary, history=history):
+        return conversation_answer(query, prompt_version=prompt_version, summary=summary, history=history)
 
+    search_query = rewrite_query_with_history(query, summary=summary, history=history)
     chunks = retrieve(
-        query=query,
+        query=search_query,
         user_id=user_id,
         doc_ids=doc_ids,
         vector_k=vector_k,
@@ -58,4 +62,6 @@ def answer_question(
         question=query,
         chunks=chunks,
         prompt_version=prompt_version,
+        summary=summary,
+        history=history,
     )

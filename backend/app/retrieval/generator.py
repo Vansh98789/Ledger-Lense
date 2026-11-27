@@ -75,10 +75,70 @@ def _parse_llm_json(raw: str) -> Dict[str, Any]:
         }
 
 
+def _format_memory(
+    summary: Optional[str] = None,
+    history: Optional[List[Dict[str, str]]] = None,
+) -> str:
+    parts: List[str] = []
+    if summary:
+        parts.append(f"Earlier conversation summary:\n{summary}")
+    if history:
+        turns = "\n".join(f"{m['role'].capitalize()}: {m['content']}" for m in history)
+        parts.append(f"Recent messages:\n{turns}")
+    return "\n\n".join(parts)
+
+
+def rewrite_query_with_history(
+    query: str,
+    summary: Optional[str] = None,
+    history: Optional[List[Dict[str, str]]] = None,
+) -> str:
+    memory_str = _format_memory(summary=summary, history=history)
+    if not memory_str:
+        return query
+
+    llm = get_qa_llm()
+    system_prompt = (
+        "Rewrite the user's latest question into a standalone search query using the conversation context. "
+        "Resolve pronouns (it, they, that, those) and missing subjects. "
+        "If the question is already standalone, return it unchanged. Output ONLY the rewritten query."
+    )
+    response = llm.invoke(
+        [
+            SystemMessage(content=system_prompt),
+            HumanMessage(content=f"{memory_str}\n\nLatest question: {query}"),
+        ]
+    )
+    rewritten = str(response.content).strip()
+    return rewritten or query
+
+
+def summarize_messages(
+    existing_summary: Optional[str],
+    messages: List[Dict[str, str]],
+) -> str:
+    turns = "\n".join(f"{m['role'].capitalize()}: {m['content']}" for m in messages)
+    prior = f"Existing summary:\n{existing_summary}\n\n" if existing_summary else ""
+    llm = get_qa_llm()
+    system_prompt = (
+        "Update the running summary of a financial document Q&A conversation. "
+        "Preserve key entities, metrics, figures, and document topics discussed. Keep it concise (under 150 words)."
+    )
+    response = llm.invoke(
+        [
+            SystemMessage(content=system_prompt),
+            HumanMessage(content=f"{prior}New turns to fold in:\n{turns}"),
+        ]
+    )
+    return str(response.content).strip()
+
+
 def generate_answer(
     question: str,
     chunks: List[Dict[str, Any]],
     prompt_version: str = "v1",
+    summary: Optional[str] = None,
+    history: Optional[List[Dict[str, str]]] = None,
 ) -> Dict[str, Any]:
     if not chunks:
         return {
@@ -90,7 +150,9 @@ def generate_answer(
 
     system_prompt = load_qa_prompt(version=prompt_version)
     context_str = format_context(chunks)
-    user_prompt = f"Context:\n{context_str}\n\nQuestion: {question}"
+    memory_str = _format_memory(summary=summary, history=history)
+    memory_block = f"Conversation History:\n{memory_str}\n\n" if memory_str else ""
+    user_prompt = f"{memory_block}Context:\n{context_str}\n\nQuestion: {question}"
 
     llm = get_qa_llm()
     response = llm.invoke(
@@ -128,9 +190,17 @@ def generate_answer(
     }
 
 
-def not_need_retreival(query: str, prompt_version: str = "v1") -> bool:
+def not_need_retreival(
+    query: str,
+    prompt_version: str = "v1",
+    summary: Optional[str] = None,
+    history: Optional[List[Dict[str, str]]] = None,
+) -> bool:
     system_prompt = load_need_retrieval_prompt(version=prompt_version)
-    user_question = f"Question: {query}"
+    memory_str = _format_memory(summary=summary, history=history)
+    user_question = (
+        f"{memory_str}\n\nQuestion: {query}" if memory_str else f"Question: {query}"
+    )
     llm = get_qa_llm()
     response = llm.invoke(
         [SystemMessage(content=system_prompt), HumanMessage(content=user_question)]
@@ -138,9 +208,17 @@ def not_need_retreival(query: str, prompt_version: str = "v1") -> bool:
     return str(response.content).strip().upper() == "FALSE"
 
 
-def conversation_answer(query: str, prompt_version: str = "v1") -> Dict[str, Any]:
+def conversation_answer(
+    query: str,
+    prompt_version: str = "v1",
+    summary: Optional[str] = None,
+    history: Optional[List[Dict[str, str]]] = None,
+) -> Dict[str, Any]:
     system_prompt = load_conversation_answer_prompt(version=prompt_version)
-    user_question = f"Question: {query}"
+    memory_str = _format_memory(summary=summary, history=history)
+    user_question = (
+        f"{memory_str}\n\nQuestion: {query}" if memory_str else f"Question: {query}"
+    )
     llm = get_qa_llm()
     response = llm.invoke(
         [SystemMessage(content=system_prompt), HumanMessage(content=user_question)]
