@@ -10,6 +10,9 @@ Finds the top 5 most relevant chunks for a user question using hybrid search + r
 User Question
     │
     ▼
+0. check whether the retrival is need or not 
+    │
+    ▼
 1. hybrid_search()     → 10 semantic (Chroma) + 10 keyword (BM25) → deduplicated (up to 20)
     │                    [see HYBRID.md]
     ▼

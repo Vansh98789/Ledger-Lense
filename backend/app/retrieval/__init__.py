@@ -1,7 +1,11 @@
 from typing import Any, Dict, List, Optional
 
 from app.db.chroma_intergration import DEFAULT_COLLECTION
-from app.retrieval.generator import generate_answer
+from app.retrieval.generator import (
+    generate_answer,
+    not_need_retreival,
+    conversation_answer,
+)
 from app.retrieval.hybrid import hybrid_search
 from app.retrieval.reranker import rerank_chunks
 
@@ -37,6 +41,9 @@ def answer_question(
     collection_name: str = DEFAULT_COLLECTION,
     prompt_version: str = "v1",
 ) -> Dict[str, Any]:
+
+    if not_need_retreival(query, prompt_version=prompt_version):
+        return conversation_answer(query, prompt_version=prompt_version)
 
     chunks = retrieve(
         query=query,

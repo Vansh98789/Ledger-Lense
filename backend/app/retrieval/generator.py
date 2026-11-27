@@ -27,6 +27,20 @@ def get_qa_llm(model_name: str = DEFAULT_QA_MODEL) -> ChatGroq:
     return _llm
 
 
+def load_need_retrieval_prompt(version: str = "v1") -> str:
+    prompt_path = PROMPTS_DIR / version / f"need_retrieval_{version}.txt"
+    if not prompt_path.exists():
+        raise FileNotFoundError(f"the need retrieval propmpt not found:{prompt_path}")
+    return prompt_path.read_text(encoding="utf-8").strip()
+
+
+def load_conversation_answer_prompt(version: str = "v1") -> str:
+    prompt_path = PROMPTS_DIR / version / f"conversation_answer_{version}.txt"
+    if not prompt_path.exists():
+        raise FileNotFoundError(f"Conversation answer prompt not found: {prompt_path}")
+    return prompt_path.read_text(encoding="utf-8").strip()
+
+
 def load_qa_prompt(version: str = "v1") -> str:
     prompt_path = PROMPTS_DIR / version / f"qa_{version}.txt"
     if not prompt_path.exists():
@@ -111,4 +125,29 @@ def generate_answer(
         "confidence": confidence,
         "citations": citations,
         "retrieved_chunks": chunks,
+    }
+
+
+def not_need_retreival(query: str, prompt_version: str = "v1") -> bool:
+    system_prompt = load_need_retrieval_prompt(version=prompt_version)
+    user_question = f"Question: {query}"
+    llm = get_qa_llm()
+    response = llm.invoke(
+        [SystemMessage(content=system_prompt), HumanMessage(content=user_question)]
+    )
+    return str(response.content).strip().upper() == "FALSE"
+
+
+def conversation_answer(query: str, prompt_version: str = "v1") -> Dict[str, Any]:
+    system_prompt = load_conversation_answer_prompt(version=prompt_version)
+    user_question = f"Question: {query}"
+    llm = get_qa_llm()
+    response = llm.invoke(
+        [SystemMessage(content=system_prompt), HumanMessage(content=user_question)]
+    )
+    return {
+        "answer": str(response.content).strip(),
+        "confidence": "CONVERSATIONAL",
+        "citations": [],
+        "retrieved_chunks": [],
     }
