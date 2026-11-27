@@ -57,7 +57,7 @@ export function isAuthenticated(): boolean {
 export interface Document {
   id: string;
   filename: string;
-  status: "PENDING" | "PROCESSING" | "COMPLETED" | "FAILED";
+  status: "QUEUED" | "EXTRACTING" | "COMPLETED" | "FAILED";
   created_at: string;
 }
 
@@ -99,6 +99,6 @@ export async function chat(
 ): Promise<ChatResponse> {
   return request<ChatResponse>("/api/chat/", {
     method: "POST",
-    body: JSON.stringify({ question, doc_ids: docIds }),
+    body: JSON.stringify({ query:question, doc_ids: docIds }),
   });
 }

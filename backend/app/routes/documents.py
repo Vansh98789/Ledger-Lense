@@ -1,7 +1,15 @@
 import uuid
 from typing import List, Optional
 
-from fastapi import APIRouter, BackgroundTasks, Depends, File, HTTPException, UploadFile, status
+from fastapi import (
+    APIRouter,
+    BackgroundTasks,
+    Depends,
+    File,
+    HTTPException,
+    UploadFile,
+    status,
+)
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
@@ -30,7 +38,6 @@ def _run_ingestion(
     user_id: str,
     db_url: str,
 ) -> None:
-    """Background task: load PDF bytes, ingest, update DB status."""
     from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
     from app.db.postgres import Document
@@ -50,7 +57,7 @@ def _run_ingestion(
         if not pdf_bytes:
             raise FileNotFoundError("PDF not found in storage.")
 
-        ingest_document(pdf_bytes=pdf_bytes, doc_id=doc_id, user_id=user_id)
+        ingest_document(pdf_source=pdf_bytes, doc_id=doc_id, user_id=user_id)
 
         doc.status = "COMPLETED"
         db.commit()
@@ -82,7 +89,9 @@ class UploadResponse(BaseModel):
     status: str
 
 
-@router.post("/upload", response_model=UploadResponse, status_code=status.HTTP_202_ACCEPTED)
+@router.post(
+    "/upload", response_model=UploadResponse, status_code=status.HTTP_202_ACCEPTED
+)
 async def upload_document(
     background_tasks: BackgroundTasks,
     file: UploadFile = File(...),
@@ -107,7 +116,11 @@ async def upload_document(
     db.commit()
 
     import os
-    db_url = os.getenv("DATABASE_URL") or f"sqlite:///{__import__('pathlib').Path(__file__).resolve().parents[2] / 'ledgerlens.db'}"
+
+    db_url = (
+        os.getenv("DATABASE_URL")
+        or f"sqlite:///{__import__('pathlib').Path(__file__).resolve().parents[2] / 'ledgerlens.db'}"
+    )
     background_tasks.add_task(_run_ingestion, storage_key, doc_id, user_id, db_url)
 
     return UploadResponse(doc_id=doc_id, status="QUEUED")
@@ -118,7 +131,12 @@ def list_documents(
     user_id: str = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
-    docs = db.query(Document).filter(Document.user_id == user_id).order_by(Document.created_at.desc()).all()
+    docs = (
+        db.query(Document)
+        .filter(Document.user_id == user_id)
+        .order_by(Document.created_at.desc())
+        .all()
+    )
     return docs
 
 
@@ -128,7 +146,11 @@ def get_document_status(
     user_id: str = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
-    doc = db.query(Document).filter(Document.id == doc_id, Document.user_id == user_id).first()
+    doc = (
+        db.query(Document)
+        .filter(Document.id == doc_id, Document.user_id == user_id)
+        .first()
+    )
     if not doc:
         raise HTTPException(status_code=404, detail="Document not found.")
     return doc

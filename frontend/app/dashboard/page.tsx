@@ -26,13 +26,13 @@ const STATUS_META: Record<
   Document["status"],
   { label: string; badge: string; dot: string }
 > = {
-  PENDING: {
-    label: "Pending",
+  QUEUED: {
+    label: "Queued",
     badge: "bg-amber-500/10 text-amber-300 border-amber-500/20",
     dot: "bg-amber-400 animate-pulse",
   },
-  PROCESSING: {
-    label: "Processing",
+  EXTRACTING: {
+    label: "EXTRACTING",
     badge: "bg-indigo-500/10 text-indigo-300 border-indigo-500/20",
     dot: "bg-indigo-400 animate-pulse",
   },
@@ -68,10 +68,10 @@ export default function DashboardPage() {
   // Poll in-progress docs
   useEffect(() => {
     const pending = docs.filter(
-      (d) => d.status === "PENDING" || d.status === "PROCESSING"
+      (d) => d.status === "QUEUED" || d.status === "EXTRACTING",
     );
     if (!pending.length) return;
-    const id = setTimeout(fetchDocs, 3000);
+    const id = setTimeout(fetchDocs, 2000);
     return () => clearTimeout(id);
   }, [docs]);
 
@@ -121,7 +121,7 @@ export default function DashboardPage() {
 
   const readyCount = docs.filter((d) => d.status === "COMPLETED").length;
   const activeCount = docs.filter(
-    (d) => d.status === "PENDING" || d.status === "PROCESSING"
+    (d) => d.status === "QUEUED" || d.status === "EXTRACTING",
   ).length;
 
   return (
@@ -171,7 +171,9 @@ export default function DashboardPage() {
             </div>
             <div className="px-3 py-1.5 rounded-lg border border-emerald-500/20 bg-emerald-500/5 text-xs text-emerald-400 flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5" />
-              <span className="font-mono-code font-medium">{readyCount}</span>{" "}
+              <span className="font-mono-code font-medium">
+                {readyCount}
+              </span>{" "}
               ready
             </div>
             {activeCount > 0 && (
@@ -215,7 +217,8 @@ export default function DashboardPage() {
                 : "Drop a PDF here, or click to browse"}
             </p>
             <p className="text-xs text-slate-500 mt-1">
-              Supports multi-column reports, tables, and scanned PDFs · Max 25 MB
+              Supports multi-column reports, tables, and scanned PDFs · Max 25
+              MB
             </p>
           </div>
           <input
@@ -252,7 +255,9 @@ export default function DashboardPage() {
           ) : docs.length === 0 ? (
             <div className="rounded-2xl border border-white/[0.06] bg-[#0e1017]/50 py-14 text-center">
               <FileText className="w-8 h-8 text-slate-600 mx-auto mb-2" />
-              <p className="text-sm text-slate-400">No documents uploaded yet</p>
+              <p className="text-sm text-slate-400">
+                No documents uploaded yet
+              </p>
               <p className="text-xs text-slate-600 mt-1">
                 Upload your first financial PDF above to begin.
               </p>
@@ -260,7 +265,7 @@ export default function DashboardPage() {
           ) : (
             <div className="flex flex-col gap-2.5">
               {docs.map((doc) => {
-                const meta = STATUS_META[doc.status] ?? STATUS_META.PENDING;
+                const meta = STATUS_META[doc.status] ?? STATUS_META.QUEUED;
                 return (
                   <div
                     key={doc.id}
@@ -282,7 +287,7 @@ export default function DashboardPage() {
                               month: "short",
                               day: "numeric",
                               year: "numeric",
-                            }
+                            },
                           )}
                         </p>
                       </div>
@@ -292,7 +297,9 @@ export default function DashboardPage() {
                       <span
                         className={`inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full border ${meta.badge}`}
                       >
-                        <span className={`w-1.5 h-1.5 rounded-full ${meta.dot}`} />
+                        <span
+                          className={`w-1.5 h-1.5 rounded-full ${meta.dot}`}
+                        />
                         {meta.label}
                       </span>
 
