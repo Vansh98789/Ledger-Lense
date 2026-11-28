@@ -1,0 +1,3445 @@
+[
+  {
+    "id": "TC_001",
+    "test_type": "retrieval_focus",
+    "question": "What was Total Automotive Revenues in Q3 2024?",
+    "expected_page": 4,
+    "ground_truth": "20,016 million USD",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      4,
+      3,
+      5,
+      7,
+      31
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "Total automotive revenues in Q3 2024 were $20,016\u202fmillion.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_6",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 4,
+        "chunk_type": "table",
+        "bbox": [
+          72.66,
+          123.95,
+          1510.79,
+          798.38
+        ],
+        "rerank_score": 3.2764
+      }
+    ],
+    "latency_seconds": 3.22,
+    "retrieved_chunks_preview": [
+      {
+        "page": 4,
+        "type": "table",
+        "preview": "| ($ i n milli ons except percentages and per sh are d ata)\n, | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| T otal automoti\nve rev"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      },
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      }
+    ]
+  },
+  {
+    "id": "TC_002",
+    "test_type": "retrieval_focus",
+    "question": "What was Total Energy Generation and Storage Revenue in Q3 2024?",
+    "expected_page": 4,
+    "ground_truth": "2,376 million USD",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      9,
+      5,
+      4,
+      3,
+      10
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "Total Energy Generation and Storage revenue in Q3 2024 was $2,376\u202fmillion.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_6",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 4,
+        "chunk_type": "table",
+        "bbox": [
+          72.66,
+          123.95,
+          1510.79,
+          798.38
+        ],
+        "rerank_score": 1.6067
+      }
+    ],
+    "latency_seconds": 2.98,
+    "retrieved_chunks_preview": [
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      },
+      {
+        "page": 4,
+        "type": "table",
+        "preview": "| ($ i n milli ons except percentages and per sh are d ata)\n, | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| T otal automoti\nve rev"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 10,
+        "type": "text",
+        "preview": "O U T L O O K\n\nVolume\nOur company is currently between two major growth waves: the first one began with the global expansion of the Model 3/Y platform \nand we believe the next one will be initiated by"
+      }
+    ]
+  },
+  {
+    "id": "TC_003",
+    "test_type": "retrieval_focus",
+    "question": "What was Total Services and Other Revenue in Q3 2024?",
+    "expected_page": 4,
+    "ground_truth": "2,790 million USD",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      5,
+      3,
+      4,
+      9,
+      7
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "$2,790 million",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_6",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 4,
+        "chunk_type": "table",
+        "bbox": [
+          72.66,
+          123.95,
+          1510.79,
+          798.38
+        ],
+        "rerank_score": -0.0808
+      }
+    ],
+    "latency_seconds": 14.87,
+    "retrieved_chunks_preview": [
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 4,
+        "type": "table",
+        "preview": "| ($ i n milli ons except percentages and per sh are d ata)\n, | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| T otal automoti\nve rev"
+      },
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      },
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      }
+    ]
+  },
+  {
+    "id": "TC_004",
+    "test_type": "retrieval_focus",
+    "question": "What was Tesla's Total Revenue in Q3 2024?",
+    "expected_page": 4,
+    "ground_truth": "25,182 million USD",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      7,
+      31,
+      3,
+      9,
+      4
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "Tesla's Total Revenue in Q3 2024 was $25,182\u202fmillion.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_6",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 4,
+        "chunk_type": "table",
+        "bbox": [
+          72.66,
+          123.95,
+          1510.79,
+          798.38
+        ],
+        "rerank_score": 0.6059
+      }
+    ],
+    "latency_seconds": 25.62,
+    "retrieved_chunks_preview": [
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      },
+      {
+        "page": 4,
+        "type": "table",
+        "preview": "| ($ i n milli ons except percentages and per sh are d ata)\n, | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| T otal automoti\nve rev"
+      }
+    ]
+  },
+  {
+    "id": "TC_005",
+    "test_type": "retrieval_focus",
+    "question": "What was Total Gross Profit in Q3 2024?",
+    "expected_page": 4,
+    "ground_truth": "4,997 million USD",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      3,
+      9,
+      4,
+      5,
+      7
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "Total gross profit in Q3 2024 was $4,997\u202fmillion.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_6",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 4,
+        "chunk_type": "table",
+        "bbox": [
+          72.66,
+          123.95,
+          1510.79,
+          798.38
+        ],
+        "rerank_score": 1.0644
+      }
+    ],
+    "latency_seconds": 25.31,
+    "retrieved_chunks_preview": [
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      },
+      {
+        "page": 4,
+        "type": "table",
+        "preview": "| ($ i n milli ons except percentages and per sh are d ata)\n, | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| T otal automoti\nve rev"
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      },
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      }
+    ]
+  },
+  {
+    "id": "TC_006",
+    "test_type": "retrieval_focus",
+    "question": "What was Total GAAP Gross Margin in Q3 2024?",
+    "expected_page": 4,
+    "ground_truth": "19.8%",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      3,
+      9,
+      4,
+      7,
+      5
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "The Total GAAP Gross Margin in Q3 2024 was 19.8%.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_6",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 4,
+        "chunk_type": "table",
+        "bbox": [
+          72.66,
+          123.95,
+          1510.79,
+          798.38
+        ],
+        "rerank_score": 0.363
+      }
+    ],
+    "latency_seconds": 25.37,
+    "retrieved_chunks_preview": [
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      },
+      {
+        "page": 4,
+        "type": "table",
+        "preview": "| ($ i n milli ons except percentages and per sh are d ata)\n, | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| T otal automoti\nve rev"
+      },
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      }
+    ]
+  },
+  {
+    "id": "TC_007",
+    "test_type": "retrieval_focus",
+    "question": "What was Income from Operations in Q3 2024?",
+    "expected_page": 4,
+    "ground_truth": "2,717 million USD",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      3,
+      5,
+      30,
+      1,
+      7
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "$2.7\u202fbillion GAAP operating income in Q3 2024.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_2",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 3,
+        "chunk_type": "text",
+        "bbox": [
+          70.19,
+          81.17,
+          1521.67,
+          755.49
+        ],
+        "rerank_score": 5.2192
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_7",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 5,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1326.99,
+          861.09
+        ],
+        "rerank_score": -0.2914
+      }
+    ],
+    "latency_seconds": 24.14,
+    "retrieved_chunks_preview": [
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      },
+      {
+        "page": 30,
+        "type": "table",
+        "preview": "| In millions of USD | 4Q 2021\n- | 1Q 2022\n- | 2Q 2022\n- | 3Q 2022\n- | 4Q 2022\n- | 1Q 2023\n- | 2Q 2023\n- | 3Q 2023\n- | 4Q 2023\n- | 1Q 2024\n- | 2Q 2024\n- | 3Q 2024\n- |\n| --- | --- | --- | --- | --- | -"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      },
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      }
+    ]
+  },
+  {
+    "id": "TC_008",
+    "test_type": "retrieval_focus",
+    "question": "What was Operating Margin in Q3 2024?",
+    "expected_page": 4,
+    "ground_truth": "10.8%",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      3,
+      5,
+      9,
+      7,
+      1
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "The operating margin in Q3 2024 was 10.8%.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_7",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 5,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1326.99,
+          861.09
+        ],
+        "rerank_score": 0.6841
+      }
+    ],
+    "latency_seconds": 16.75,
+    "retrieved_chunks_preview": [
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      },
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      },
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      }
+    ]
+  },
+  {
+    "id": "TC_009",
+    "test_type": "retrieval_focus",
+    "question": "What was Adjusted EBITDA in Q3 2024?",
+    "expected_page": 4,
+    "ground_truth": "4,665 million USD",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      31,
+      1,
+      6,
+      3,
+      29
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Not found in the document.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_58",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 31,
+        "chunk_type": "text",
+        "bbox": [
+          72.18,
+          77.52,
+          1514.59,
+          342.32
+        ],
+        "rerank_score": 1.0213
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_2",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 3,
+        "chunk_type": "text",
+        "bbox": [
+          70.19,
+          81.17,
+          1521.67,
+          755.49
+        ],
+        "rerank_score": -2.2972
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_51",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 29,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1505.21,
+          861.09
+        ],
+        "rerank_score": -2.4784
+      }
+    ],
+    "latency_seconds": 20.26,
+    "retrieved_chunks_preview": [
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      },
+      {
+        "page": 6,
+        "type": "table",
+        "preview": "|  | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| M od el 3/Y prod ucti\non | 416 800\n, | 476 777\n, | 412 376\n, | 386 576\n, | 443 66"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 29,
+        "type": "text",
+        "preview": "R E C O N C I L I A T I O N O F G A A P T O N O N \u2013 G A A P F I N A N C I A L I N F O R M A T I O N \n(Unaudited)\n\nIn millions of USD or shares as applicable, except per share data\nQ3-2023\nQ4-2023\nQ1-2"
+      }
+    ]
+  },
+  {
+    "id": "TC_010",
+    "test_type": "retrieval_focus",
+    "question": "What was diluted GAAP EPS attributable to common stockholders in Q3 2024?",
+    "expected_page": 4,
+    "ground_truth": "$0.62",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      31,
+      30,
+      3,
+      31,
+      4
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "The diluted GAAP EPS attributable to common stockholders in Q3 2024 was $0.62.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_6",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 4,
+        "chunk_type": "table",
+        "bbox": [
+          72.66,
+          123.95,
+          1510.79,
+          798.38
+        ],
+        "rerank_score": -3.2902
+      }
+    ],
+    "latency_seconds": 31.13,
+    "retrieved_chunks_preview": [
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "NON-GAAP FINANCIAL INFORMATION\n\nConsolidated financial information has been presented in accordance with GAAP as well as on a non-GAAP basis to supplement our consolidated financial results. Our non-G"
+      },
+      {
+        "page": 30,
+        "type": "table",
+        "preview": "| In millions of USD | 4Q 2021\n- | 1Q 2022\n- | 2Q 2022\n- | 3Q 2022\n- | 4Q 2022\n- | 1Q 2023\n- | 2Q 2023\n- | 3Q 2023\n- | 4Q 2023\n- | 1Q 2024\n- | 2Q 2024\n- | 3Q 2024\n- |\n| --- | --- | --- | --- | --- | -"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      },
+      {
+        "page": 4,
+        "type": "table",
+        "preview": "| ($ i n milli ons except percentages and per sh are d ata)\n, | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| T otal automoti\nve rev"
+      }
+    ]
+  },
+  {
+    "id": "TC_011",
+    "test_type": "retrieval_focus",
+    "question": "How much net cash was provided by operating activities in Q3 2024?",
+    "expected_page": 4,
+    "ground_truth": "6,255 million USD",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      3,
+      30,
+      30,
+      28,
+      5
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "$6,255\u202fmillion (approximately $6.3\u202fbillion) was provided by operating activities in Q3\u202f2024.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_2",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 3,
+        "chunk_type": "text",
+        "bbox": [
+          70.19,
+          81.17,
+          1521.67,
+          755.49
+        ],
+        "rerank_score": 5.0961
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_55",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 30,
+        "chunk_type": "table",
+        "bbox": [
+          72.2,
+          125.57,
+          1510.79,
+          382.61
+        ],
+        "rerank_score": 3.0808
+      }
+    ],
+    "latency_seconds": 33.17,
+    "retrieved_chunks_preview": [
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 30,
+        "type": "table",
+        "preview": "| In millions of USD | 1Q 2021\n- | 2Q 2021\n- | 3Q 2021\n- | 4Q 2021\n- | 1Q 2022\n- | 2Q 2022\n- | 3Q 2022\n- | 4Q 2022\n- | 1Q 2023\n- | 2Q 2023\n- | 3Q 2023\n- | 4Q 2023\n- | 1Q 2024\n- | 2Q 2024\n- | 3Q 2024\n-"
+      },
+      {
+        "page": 30,
+        "type": "table",
+        "preview": "| In millions of USD | 4Q 2021\n- | 1Q 2022\n- | 2Q 2022\n- | 3Q 2022\n- | 4Q 2022\n- | 1Q 2023\n- | 2Q 2023\n- | 3Q 2023\n- | 4Q 2023\n- | 1Q 2024\n- | 2Q 2024\n- | 3Q 2024\n- |\n| --- | --- | --- | --- | --- | -"
+      },
+      {
+        "page": 28,
+        "type": "table",
+        "preview": "| CASH FLOWS FROM OPERATING ACTIVITIES |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- |\n|  |  |  |  |  | 2 183\n, |\n|  |  |  |  |  |  |\n|  |  |  |  |  | 1 348\n, |\n|  |  |  |  |  | 457 |\n|  |  |  "
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      }
+    ]
+  },
+  {
+    "id": "TC_012",
+    "test_type": "retrieval_focus",
+    "question": "What were Capital Expenditures in Q3 2024?",
+    "expected_page": 4,
+    "ground_truth": "(3,513) million USD",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      3,
+      1,
+      30,
+      4,
+      7
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "Capital expenditures in Q3\u202f2024 were $3,513\u202fmillion (\u2248$3.5\u202fbillion).",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_55",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 30,
+        "chunk_type": "table",
+        "bbox": [
+          72.2,
+          125.57,
+          1510.79,
+          382.61
+        ],
+        "rerank_score": -1.4111
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_6",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 4,
+        "chunk_type": "table",
+        "bbox": [
+          72.66,
+          123.95,
+          1510.79,
+          798.38
+        ],
+        "rerank_score": -1.6052
+      }
+    ],
+    "latency_seconds": 31.79,
+    "retrieved_chunks_preview": [
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      },
+      {
+        "page": 30,
+        "type": "table",
+        "preview": "| In millions of USD | 1Q 2021\n- | 2Q 2021\n- | 3Q 2021\n- | 4Q 2021\n- | 1Q 2022\n- | 2Q 2022\n- | 3Q 2022\n- | 4Q 2022\n- | 1Q 2023\n- | 2Q 2023\n- | 3Q 2023\n- | 4Q 2023\n- | 1Q 2024\n- | 2Q 2024\n- | 3Q 2024\n-"
+      },
+      {
+        "page": 4,
+        "type": "table",
+        "preview": "| ($ i n milli ons except percentages and per sh are d ata)\n, | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| T otal automoti\nve rev"
+      },
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      }
+    ]
+  },
+  {
+    "id": "TC_013",
+    "test_type": "retrieval_focus",
+    "question": "What was Free Cash Flow in Q3 2024?",
+    "expected_page": 4,
+    "ground_truth": "2,742 million USD",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      3,
+      5,
+      1,
+      30,
+      31
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "$2.7\u202fbillion",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_2",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 3,
+        "chunk_type": "text",
+        "bbox": [
+          70.19,
+          81.17,
+          1521.67,
+          755.49
+        ],
+        "rerank_score": 5.2889
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_7",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 5,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1326.99,
+          861.09
+        ],
+        "rerank_score": -1.365
+      }
+    ],
+    "latency_seconds": 23.56,
+    "retrieved_chunks_preview": [
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      },
+      {
+        "page": 30,
+        "type": "table",
+        "preview": "| In millions of USD | 1Q 2021\n- | 2Q 2021\n- | 3Q 2021\n- | 4Q 2021\n- | 1Q 2022\n- | 2Q 2022\n- | 3Q 2022\n- | 4Q 2022\n- | 1Q 2023\n- | 2Q 2023\n- | 3Q 2023\n- | 4Q 2023\n- | 1Q 2024\n- | 2Q 2024\n- | 3Q 2024\n-"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      }
+    ]
+  },
+  {
+    "id": "TC_014",
+    "test_type": "retrieval_focus",
+    "question": "How many Model 3/Y vehicles were produced in Q3 2024?",
+    "expected_page": 6,
+    "ground_truth": "443,668 vehicles",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      7,
+      10,
+      8,
+      3,
+      6
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "443,668 Model 3/Y vehicles were produced in Q3 2024.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_9",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 6,
+        "chunk_type": "table",
+        "bbox": [
+          72.55,
+          124.41,
+          1511.43,
+          671.61
+        ],
+        "rerank_score": 0.2567
+      }
+    ],
+    "latency_seconds": 24.94,
+    "retrieved_chunks_preview": [
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 10,
+        "type": "text",
+        "preview": "O U T L O O K\n\nVolume\nOur company is currently between two major growth waves: the first one began with the global expansion of the Model 3/Y platform \nand we believe the next one will be initiated by"
+      },
+      {
+        "page": 8,
+        "type": "text",
+        "preview": "C O R E   T E C H N O L O G Y\n\nArtificial Intelligence Software and Hardware\n\nIn Q3, we released the 12.5 series of FSD (Supervised)1  with improved safety and comfort \nthanks to increased data and tr"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 6,
+        "type": "table",
+        "preview": "|  | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| M od el 3/Y prod ucti\non | 416 800\n, | 476 777\n, | 412 376\n, | 386 576\n, | 443 66"
+      }
+    ]
+  },
+  {
+    "id": "TC_015",
+    "test_type": "retrieval_focus",
+    "question": "How many total vehicles were delivered in Q3 2024?",
+    "expected_page": 6,
+    "ground_truth": "462,890 vehicles",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      7,
+      3,
+      10,
+      31,
+      9
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Not found in the document.",
+    "retrieved_chunk_count": 5,
+    "citations": [],
+    "latency_seconds": 19.38,
+    "retrieved_chunks_preview": [
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 10,
+        "type": "text",
+        "preview": "O U T L O O K\n\nVolume\nOur company is currently between two major growth waves: the first one began with the global expansion of the Model 3/Y platform \nand we believe the next one will be initiated by"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      },
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      }
+    ]
+  },
+  {
+    "id": "TC_016",
+    "test_type": "retrieval_focus",
+    "question": "How many Other Models were delivered in Q3 2024?",
+    "expected_page": 6,
+    "ground_truth": "22,915 vehicles",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      7,
+      3,
+      10,
+      8,
+      1
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Not found in the document.",
+    "retrieved_chunk_count": 5,
+    "citations": [],
+    "latency_seconds": 17.75,
+    "retrieved_chunks_preview": [
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 10,
+        "type": "text",
+        "preview": "O U T L O O K\n\nVolume\nOur company is currently between two major growth waves: the first one began with the global expansion of the Model 3/Y platform \nand we believe the next one will be initiated by"
+      },
+      {
+        "page": 8,
+        "type": "text",
+        "preview": "C O R E   T E C H N O L O G Y\n\nArtificial Intelligence Software and Hardware\n\nIn Q3, we released the 12.5 series of FSD (Supervised)1  with improved safety and comfort \nthanks to increased data and tr"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      }
+    ]
+  },
+  {
+    "id": "TC_017",
+    "test_type": "retrieval_focus",
+    "question": "What was global vehicle inventory in days of supply in Q3 2024?",
+    "expected_page": 6,
+    "ground_truth": "19 days",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      31,
+      6,
+      7,
+      10,
+      3
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Not found in the document.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_58",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 31,
+        "chunk_type": "text",
+        "bbox": [
+          72.18,
+          77.52,
+          1514.59,
+          342.32
+        ],
+        "rerank_score": 0.4666
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_8",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 6,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1117.8,
+          862.39
+        ],
+        "rerank_score": -0.1609
+      }
+    ],
+    "latency_seconds": 15.87,
+    "retrieved_chunks_preview": [
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      },
+      {
+        "page": 6,
+        "type": "text",
+        "preview": "O P E R A T I O N A L S U M M A R Y\n(Unaudited)\n\n6\n\n(1)Days of supply is calculated by dividing new vehicle ending inventory by the relevant quarter\u2019s deliveries and using 75 trading days (aligned wit"
+      },
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 10,
+        "type": "text",
+        "preview": "O U T L O O K\n\nVolume\nOur company is currently between two major growth waves: the first one began with the global expansion of the Model 3/Y platform \nand we believe the next one will be initiated by"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      }
+    ]
+  },
+  {
+    "id": "TC_018",
+    "test_type": "retrieval_focus",
+    "question": "How much energy storage was deployed in Q3 2024?",
+    "expected_page": 6,
+    "ground_truth": "6.9 GWh",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      9,
+      10,
+      3,
+      6,
+      8
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "Energy storage deployed in Q3 2024 was 69\u202fGWh.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_9",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 6,
+        "chunk_type": "table",
+        "bbox": [
+          72.55,
+          124.41,
+          1511.43,
+          671.61
+        ],
+        "rerank_score": -0.4696
+      }
+    ],
+    "latency_seconds": 25.11,
+    "retrieved_chunks_preview": [
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      },
+      {
+        "page": 10,
+        "type": "text",
+        "preview": "O U T L O O K\n\nVolume\nOur company is currently between two major growth waves: the first one began with the global expansion of the Model 3/Y platform \nand we believe the next one will be initiated by"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 6,
+        "type": "table",
+        "preview": "|  | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| M od el 3/Y prod ucti\non | 416 800\n, | 476 777\n, | 412 376\n, | 386 576\n, | 443 66"
+      },
+      {
+        "page": 8,
+        "type": "text",
+        "preview": "C O R E   T E C H N O L O G Y\n\nArtificial Intelligence Software and Hardware\n\nIn Q3, we released the 12.5 series of FSD (Supervised)1  with improved safety and comfort \nthanks to increased data and tr"
+      }
+    ]
+  },
+  {
+    "id": "TC_019",
+    "test_type": "retrieval_focus",
+    "question": "How many Supercharger connectors did Tesla have at the end of Q3 2024?",
+    "expected_page": 6,
+    "ground_truth": "62,421 connectors",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      8,
+      9,
+      7,
+      6,
+      1
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "Tesla had 62,421 Supercharger connectors at the end of Q3 2024.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_9",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 6,
+        "chunk_type": "table",
+        "bbox": [
+          72.55,
+          124.41,
+          1511.43,
+          671.61
+        ],
+        "rerank_score": -3.3272
+      }
+    ],
+    "latency_seconds": 21.35,
+    "retrieved_chunks_preview": [
+      {
+        "page": 8,
+        "type": "text",
+        "preview": "C O R E   T E C H N O L O G Y\n\nArtificial Intelligence Software and Hardware\n\nIn Q3, we released the 12.5 series of FSD (Supervised)1  with improved safety and comfort \nthanks to increased data and tr"
+      },
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      },
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 6,
+        "type": "table",
+        "preview": "|  | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| M od el 3/Y prod ucti\non | 416 800\n, | 476 777\n, | 412 376\n, | 386 576\n, | 443 66"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      }
+    ]
+  },
+  {
+    "id": "TC_020",
+    "test_type": "retrieval_focus",
+    "question": "What was the installed annual capacity for Model 3/Y at the Shanghai factory?",
+    "expected_page": 7,
+    "ground_truth": "More than 950,000 vehicles annually",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      7,
+      10,
+      9,
+      8,
+      3
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Not found in the document.",
+    "retrieved_chunk_count": 5,
+    "citations": [],
+    "latency_seconds": 20.67,
+    "retrieved_chunks_preview": [
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 10,
+        "type": "text",
+        "preview": "O U T L O O K\n\nVolume\nOur company is currently between two major growth waves: the first one began with the global expansion of the Model 3/Y platform \nand we believe the next one will be initiated by"
+      },
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      },
+      {
+        "page": 8,
+        "type": "text",
+        "preview": "C O R E   T E C H N O L O G Y\n\nArtificial Intelligence Software and Hardware\n\nIn Q3, we released the 12.5 series of FSD (Supervised)1  with improved safety and comfort \nthanks to increased data and tr"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      }
+    ]
+  },
+  {
+    "id": "TC_021",
+    "test_type": "retrieval_focus",
+    "question": "What H100 cluster size was deployed at Gigafactory Texas in Q3 2024?",
+    "expected_page": 8,
+    "ground_truth": "29,000 H100 GPUs",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      8,
+      7,
+      3,
+      1,
+      9
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "A 29,000 H100 GPU cluster was deployed at Gigafactory Texas in Q3 2024.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_14",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 8,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.53,
+          1485.24,
+          861.09
+        ],
+        "rerank_score": 4.522
+      }
+    ],
+    "latency_seconds": 17.85,
+    "retrieved_chunks_preview": [
+      {
+        "page": 8,
+        "type": "text",
+        "preview": "C O R E   T E C H N O L O G Y\n\nArtificial Intelligence Software and Hardware\n\nIn Q3, we released the 12.5 series of FSD (Supervised)1  with improved safety and comfort \nthanks to increased data and tr"
+      },
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      },
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      }
+    ]
+  },
+  {
+    "id": "TC_022",
+    "test_type": "retrieval_focus",
+    "question": "What was the Q3 2024 Energy business gross margin?",
+    "expected_page": 9,
+    "ground_truth": "30.5%",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      9,
+      3,
+      3,
+      7,
+      5
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "The Energy business achieved a record gross margin of 30.5% in Q3 2024.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_16",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 9,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1330.96,
+          861.09
+        ],
+        "rerank_score": 5.1534
+      }
+    ],
+    "latency_seconds": 19.39,
+    "retrieved_chunks_preview": [
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "The Energy business achieved another strong quarter with a record gross margin. \nAdditionally, the Megafactory in Lathrop produced 200 Megapacks in a week, and \nPowerwall deployments reached a record "
+      },
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      }
+    ]
+  },
+  {
+    "id": "TC_023",
+    "test_type": "retrieval_focus",
+    "question": "How many Powerwalls were enrolled in Virtual Power Plant programs as of Q3 2024?",
+    "expected_page": 9,
+    "ground_truth": "Over 100,000 Powerwalls",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      9,
+      3,
+      8,
+      1,
+      29
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "As of Q3 2024, over 100,000 Powerwalls were enrolled in Virtual Power Plant programs.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_16",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 9,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1330.96,
+          861.09
+        ],
+        "rerank_score": 4.5208
+      }
+    ],
+    "latency_seconds": 15.61,
+    "retrieved_chunks_preview": [
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 8,
+        "type": "text",
+        "preview": "C O R E   T E C H N O L O G Y\n\nArtificial Intelligence Software and Hardware\n\nIn Q3, we released the 12.5 series of FSD (Supervised)1  with improved safety and comfort \nthanks to increased data and tr"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      },
+      {
+        "page": 29,
+        "type": "text",
+        "preview": "R E C O N C I L I A T I O N O F G A A P T O N O N \u2013 G A A P F I N A N C I A L I N F O R M A T I O N \n(Unaudited)\n\nIn millions of USD or shares as applicable, except per share data\nQ3-2023\nQ4-2023\nQ1-2"
+      }
+    ]
+  },
+  {
+    "id": "TC_024",
+    "test_type": "retrieval_focus",
+    "question": "What does the chart on page 23 call its quarterly cash flow metrics?",
+    "expected_page": 23,
+    "ground_truth": "Free Cash Flow ($B) and Operating Cash Flow ($B)",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      31,
+      6,
+      7,
+      8,
+      9
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Not found in the document.",
+    "retrieved_chunk_count": 5,
+    "citations": [],
+    "latency_seconds": 8.43,
+    "retrieved_chunks_preview": [
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      },
+      {
+        "page": 6,
+        "type": "chart",
+        "preview": "[Financial Chart Region]"
+      },
+      {
+        "page": 7,
+        "type": "chart",
+        "preview": "[Financial Chart Region]"
+      },
+      {
+        "page": 8,
+        "type": "chart",
+        "preview": "[Financial Chart Region]"
+      },
+      {
+        "page": 9,
+        "type": "chart",
+        "preview": "[Financial Chart Region]"
+      }
+    ]
+  },
+  {
+    "id": "TC_025",
+    "test_type": "retrieval_focus",
+    "question": "What was Tesla's total assets balance at September 30, 2024?",
+    "expected_page": 27,
+    "ground_truth": "119,852 million USD",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      31,
+      7,
+      9,
+      10,
+      1
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Not found in the document.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_58",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 31,
+        "chunk_type": "text",
+        "bbox": [
+          72.18,
+          77.52,
+          1514.59,
+          342.32
+        ],
+        "rerank_score": 0.3786
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_11",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 7,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1500.47,
+          861.09
+        ],
+        "rerank_score": -1.3185
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_16",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 9,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1330.96,
+          861.09
+        ],
+        "rerank_score": -7.0697
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_18",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 10,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1332.5,
+          861.09
+        ],
+        "rerank_score": -7.4489
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_0",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 1,
+        "chunk_type": "scanned_text",
+        "bbox": [
+          626.04,
+          429.48,
+          1536.48,
+          857.16
+        ],
+        "rerank_score": -7.8104
+      }
+    ],
+    "latency_seconds": 17.88,
+    "retrieved_chunks_preview": [
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      },
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      },
+      {
+        "page": 10,
+        "type": "text",
+        "preview": "O U T L O O K\n\nVolume\nOur company is currently between two major growth waves: the first one began with the global expansion of the Model 3/Y platform \nand we believe the next one will be initiated by"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      }
+    ]
+  },
+  {
+    "id": "TC_026",
+    "test_type": "generation_focus",
+    "question": "Calculate Q3 2024 total revenue from automotive, energy generation and storage, and services and other revenue.",
+    "expected_page": 4,
+    "ground_truth": "25,182 million USD (20,016 + 2,376 + 2,790).",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      5,
+      9,
+      4,
+      3,
+      1
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "The sum of Q3\u202f2024 automotive ($20,016\u202fM), energy generation and storage ($2,376\u202fM), and services and other ($2,790\u202fM) revenues is $25,182\u202fmillion, i.e., about $25.2\u202fbillion.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_6",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 4,
+        "chunk_type": "table",
+        "bbox": [
+          72.66,
+          123.95,
+          1510.79,
+          798.38
+        ],
+        "rerank_score": 2.4397
+      }
+    ],
+    "latency_seconds": 24.63,
+    "retrieved_chunks_preview": [
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      },
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      },
+      {
+        "page": 4,
+        "type": "table",
+        "preview": "| ($ i n milli ons except percentages and per sh are d ata)\n, | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| T otal automoti\nve rev"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      }
+    ]
+  },
+  {
+    "id": "TC_027",
+    "test_type": "generation_focus",
+    "question": "Calculate the Q3 2024 year-over-year increase in total revenue in dollars using Q3 2023 and Q3 2024 values.",
+    "expected_page": 4,
+    "ground_truth": "1,832 million USD (25,182 \u2212 23,350).",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      4,
+      3,
+      29,
+      5,
+      1
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "The total revenue increased by $1,832\u202fmillion YoY (from $23,350\u202fmillion in Q3\u202f2023 to $25,182\u202fmillion in Q3\u202f2024).",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_6",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 4,
+        "chunk_type": "table",
+        "bbox": [
+          72.66,
+          123.95,
+          1510.79,
+          798.38
+        ],
+        "rerank_score": 1.8417
+      }
+    ],
+    "latency_seconds": 23.72,
+    "retrieved_chunks_preview": [
+      {
+        "page": 4,
+        "type": "table",
+        "preview": "| ($ i n milli ons except percentages and per sh are d ata)\n, | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| T otal automoti\nve rev"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 29,
+        "type": "text",
+        "preview": "R E C O N C I L I A T I O N O F G A A P T O N O N \u2013 G A A P F I N A N C I A L I N F O R M A T I O N \n(Unaudited)\n\nIn millions of USD or shares as applicable, except per share data\nQ3-2023\nQ4-2023\nQ1-2"
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      }
+    ]
+  },
+  {
+    "id": "TC_028",
+    "test_type": "generation_focus",
+    "question": "What percentage year-over-year growth in total revenue did Tesla report for Q3 2024?",
+    "expected_page": 4,
+    "ground_truth": "8%.",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      7,
+      9,
+      3,
+      10,
+      5
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "Tesla reported an 8% year-over-year increase in total revenue for Q3 2024.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_7",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 5,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1326.99,
+          861.09
+        ],
+        "rerank_score": -1.3701
+      }
+    ],
+    "latency_seconds": 22.51,
+    "retrieved_chunks_preview": [
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 10,
+        "type": "text",
+        "preview": "O U T L O O K\n\nVolume\nOur company is currently between two major growth waves: the first one began with the global expansion of the Model 3/Y platform \nand we believe the next one will be initiated by"
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      }
+    ]
+  },
+  {
+    "id": "TC_029",
+    "test_type": "generation_focus",
+    "question": "Calculate the Q3 2024 total automotive revenue from automotive sales, regulatory credits, and automotive leasing.",
+    "expected_page": 26,
+    "ground_truth": "20,016 million USD (18,831 + 739 + 446).",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      5,
+      4,
+      3,
+      31,
+      7
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "$20.016\u202fbillion (i.e., $20,016\u202fmillion) was the total automotive revenue for Q3\u202f2024.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_6",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 4,
+        "chunk_type": "table",
+        "bbox": [
+          72.66,
+          123.95,
+          1510.79,
+          798.38
+        ],
+        "rerank_score": 0.4687
+      }
+    ],
+    "latency_seconds": 26.08,
+    "retrieved_chunks_preview": [
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      },
+      {
+        "page": 4,
+        "type": "table",
+        "preview": "| ($ i n milli ons except percentages and per sh are d ata)\n, | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| T otal automoti\nve rev"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      },
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      }
+    ]
+  },
+  {
+    "id": "TC_030",
+    "test_type": "generation_focus",
+    "question": "How much of Q3 2024 automotive revenue came from regulatory credits?",
+    "expected_page": 26,
+    "ground_truth": "739 million USD.",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      5,
+      3,
+      4,
+      7,
+      1
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Not found in the document.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_7",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 5,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1326.99,
+          861.09
+        ],
+        "rerank_score": 2.2092
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_2",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 3,
+        "chunk_type": "text",
+        "bbox": [
+          70.19,
+          81.17,
+          1521.67,
+          755.49
+        ],
+        "rerank_score": 1.2788
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_6",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 4,
+        "chunk_type": "table",
+        "bbox": [
+          72.66,
+          123.95,
+          1510.79,
+          798.38
+        ],
+        "rerank_score": 0.7159
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_11",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 7,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1500.47,
+          861.09
+        ],
+        "rerank_score": -3.8656
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_0",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 1,
+        "chunk_type": "scanned_text",
+        "bbox": [
+          626.04,
+          429.48,
+          1536.48,
+          857.16
+        ],
+        "rerank_score": -4.4261
+      }
+    ],
+    "latency_seconds": 24.69,
+    "retrieved_chunks_preview": [
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 4,
+        "type": "table",
+        "preview": "| ($ i n milli ons except percentages and per sh are d ata)\n, | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| T otal automoti\nve rev"
+      },
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      }
+    ]
+  },
+  {
+    "id": "TC_031",
+    "test_type": "generation_focus",
+    "question": "Compare Q3 2024 automotive revenue with Q2 2024. What was the sequential change?",
+    "expected_page": 4,
+    "ground_truth": "An increase of 138 million USD (20,016 \u2212 19,878).",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      4,
+      3,
+      7,
+      5,
+      1
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "Q3 2024 automotive revenue was $20,016\u202fmillion, up from $19,878\u202fmillion in Q2 2024 \u2013 a sequential increase of $138\u202fmillion.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_6",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 4,
+        "chunk_type": "table",
+        "bbox": [
+          72.66,
+          123.95,
+          1510.79,
+          798.38
+        ],
+        "rerank_score": 1.7338
+      }
+    ],
+    "latency_seconds": 24.16,
+    "retrieved_chunks_preview": [
+      {
+        "page": 4,
+        "type": "table",
+        "preview": "| ($ i n milli ons except percentages and per sh are d ata)\n, | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| T otal automoti\nve rev"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      }
+    ]
+  },
+  {
+    "id": "TC_032",
+    "test_type": "generation_focus",
+    "question": "Compare energy generation and storage revenue in Q3 2024 with Q2 2024. What was the sequential change?",
+    "expected_page": 4,
+    "ground_truth": "A decrease of 638 million USD (2,376 \u2212 3,014).",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      9,
+      5,
+      3,
+      10,
+      29
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Not found in the document.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_16",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 9,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1330.96,
+          861.09
+        ],
+        "rerank_score": 2.7787
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_7",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 5,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1326.99,
+          861.09
+        ],
+        "rerank_score": 0.4605
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_2",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 3,
+        "chunk_type": "text",
+        "bbox": [
+          70.19,
+          81.17,
+          1521.67,
+          755.49
+        ],
+        "rerank_score": -0.6107
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_18",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 10,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1332.5,
+          861.09
+        ],
+        "rerank_score": -1.1559
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_51",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 29,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1505.21,
+          861.09
+        ],
+        "rerank_score": -2.6921
+      }
+    ],
+    "latency_seconds": 18.16,
+    "retrieved_chunks_preview": [
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 10,
+        "type": "text",
+        "preview": "O U T L O O K\n\nVolume\nOur company is currently between two major growth waves: the first one began with the global expansion of the Model 3/Y platform \nand we believe the next one will be initiated by"
+      },
+      {
+        "page": 29,
+        "type": "text",
+        "preview": "R E C O N C I L I A T I O N O F G A A P T O N O N \u2013 G A A P F I N A N C I A L I N F O R M A T I O N \n(Unaudited)\n\nIn millions of USD or shares as applicable, except per share data\nQ3-2023\nQ4-2023\nQ1-2"
+      }
+    ]
+  },
+  {
+    "id": "TC_033",
+    "test_type": "generation_focus",
+    "question": "Calculate the Q3 2024 gross profit margin from total gross profit and total revenue, and state the reported margin.",
+    "expected_page": 4,
+    "ground_truth": "Approximately 19.8% (4,997 \u00f7 25,182); the reported GAAP gross margin is 19.8%.",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      3,
+      4,
+      9,
+      5,
+      7
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "Using the Q3 2024 figures, total gross profit is $4,997\u202fmillion and total revenue is $25,182\u202fmillion, giving a gross profit margin of about 19.8%. This matches the reported GAAP gross margin of 19.8% for Q3 2024.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_6",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 4,
+        "chunk_type": "table",
+        "bbox": [
+          72.66,
+          123.95,
+          1510.79,
+          798.38
+        ],
+        "rerank_score": -0.7716
+      }
+    ],
+    "latency_seconds": 29.71,
+    "retrieved_chunks_preview": [
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 4,
+        "type": "table",
+        "preview": "| ($ i n milli ons except percentages and per sh are d ata)\n, | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| T otal automoti\nve rev"
+      },
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      },
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      }
+    ]
+  },
+  {
+    "id": "TC_034",
+    "test_type": "generation_focus",
+    "question": "Calculate the Q3 2024 operating income increase over Q3 2023 in dollars.",
+    "expected_page": 4,
+    "ground_truth": "953 million USD (2,717 \u2212 1,764).",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      3,
+      5,
+      30,
+      30,
+      6
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Not found in the document.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_2",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 3,
+        "chunk_type": "text",
+        "bbox": [
+          70.19,
+          81.17,
+          1521.67,
+          755.49
+        ],
+        "rerank_score": 5.9317
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_7",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 5,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1326.99,
+          861.09
+        ],
+        "rerank_score": 2.0413
+      }
+    ],
+    "latency_seconds": 35.82,
+    "retrieved_chunks_preview": [
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      },
+      {
+        "page": 30,
+        "type": "table",
+        "preview": "| In millions of USD | 1Q 2021\n- | 2Q 2021\n- | 3Q 2021\n- | 4Q 2021\n- | 1Q 2022\n- | 2Q 2022\n- | 3Q 2022\n- | 4Q 2022\n- | 1Q 2023\n- | 2Q 2023\n- | 3Q 2023\n- | 4Q 2023\n- | 1Q 2024\n- | 2Q 2024\n- | 3Q 2024\n-"
+      },
+      {
+        "page": 30,
+        "type": "table",
+        "preview": "| In millions of USD | 4Q 2021\n- | 1Q 2022\n- | 2Q 2022\n- | 3Q 2022\n- | 4Q 2022\n- | 1Q 2023\n- | 2Q 2023\n- | 3Q 2023\n- | 4Q 2023\n- | 1Q 2024\n- | 2Q 2024\n- | 3Q 2024\n- |\n| --- | --- | --- | --- | --- | -"
+      },
+      {
+        "page": 6,
+        "type": "table",
+        "preview": "|  | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| M od el 3/Y prod ucti\non | 416 800\n, | 476 777\n, | 412 376\n, | 386 576\n, | 443 66"
+      }
+    ]
+  },
+  {
+    "id": "TC_035",
+    "test_type": "generation_focus",
+    "question": "How much did operating expenses change year over year in Q3 2024?",
+    "expected_page": 4,
+    "ground_truth": "They decreased by 134 million USD, from 2,414 million to 2,280 million; reported YoY change is \u22126%.",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      3,
+      5,
+      7,
+      30,
+      10
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Not found in the document.",
+    "retrieved_chunk_count": 5,
+    "citations": [],
+    "latency_seconds": 27.2,
+    "retrieved_chunks_preview": [
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      },
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 30,
+        "type": "table",
+        "preview": "| In millions of USD | 1Q 2021\n- | 2Q 2021\n- | 3Q 2021\n- | 4Q 2021\n- | 1Q 2022\n- | 2Q 2022\n- | 3Q 2022\n- | 4Q 2022\n- | 1Q 2023\n- | 2Q 2023\n- | 3Q 2023\n- | 4Q 2023\n- | 1Q 2024\n- | 2Q 2024\n- | 3Q 2024\n-"
+      },
+      {
+        "page": 10,
+        "type": "text",
+        "preview": "O U T L O O K\n\nVolume\nOur company is currently between two major growth waves: the first one began with the global expansion of the Model 3/Y platform \nand we believe the next one will be initiated by"
+      }
+    ]
+  },
+  {
+    "id": "TC_036",
+    "test_type": "generation_focus",
+    "question": "Calculate the difference between Q3 2024 non-GAAP and GAAP net income attributable to common stockholders.",
+    "expected_page": 4,
+    "ground_truth": "338 million USD (2,505 \u2212 2,167).",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      31,
+      3,
+      30,
+      31,
+      1
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "$0.3\u202fbillion (approximately $300\u202fmillion) difference between Q3\u202f2024 non\u2011GAAP net income ($2.5\u202fB) and GAAP net income ($2.2\u202fB).",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_2",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 3,
+        "chunk_type": "text",
+        "bbox": [
+          70.19,
+          81.17,
+          1521.67,
+          755.49
+        ],
+        "rerank_score": 1.9257
+      }
+    ],
+    "latency_seconds": 16.14,
+    "retrieved_chunks_preview": [
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "NON-GAAP FINANCIAL INFORMATION\n\nConsolidated financial information has been presented in accordance with GAAP as well as on a non-GAAP basis to supplement our consolidated financial results. Our non-G"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 30,
+        "type": "table",
+        "preview": "| In millions of USD | 4Q 2021\n- | 1Q 2022\n- | 2Q 2022\n- | 3Q 2022\n- | 4Q 2022\n- | 1Q 2023\n- | 2Q 2023\n- | 3Q 2023\n- | 4Q 2023\n- | 1Q 2024\n- | 2Q 2024\n- | 3Q 2024\n- |\n| --- | --- | --- | --- | --- | -"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      }
+    ]
+  },
+  {
+    "id": "TC_037",
+    "test_type": "generation_focus",
+    "question": "What was the difference between Q3 2024 diluted non-GAAP EPS and diluted GAAP EPS?",
+    "expected_page": 4,
+    "ground_truth": "$0.10 per share ($0.72 \u2212 $0.62).",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      31,
+      3,
+      1,
+      4,
+      30
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "The diluted non\u2011GAAP EPS was $0.72 versus a diluted GAAP EPS of $0.62, a difference of $0.10.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_6",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 4,
+        "chunk_type": "table",
+        "bbox": [
+          72.66,
+          123.95,
+          1510.79,
+          798.38
+        ],
+        "rerank_score": -3.5019
+      }
+    ],
+    "latency_seconds": 29.73,
+    "retrieved_chunks_preview": [
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "NON-GAAP FINANCIAL INFORMATION\n\nConsolidated financial information has been presented in accordance with GAAP as well as on a non-GAAP basis to supplement our consolidated financial results. Our non-G"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      },
+      {
+        "page": 4,
+        "type": "table",
+        "preview": "| ($ i n milli ons except percentages and per sh are d ata)\n, | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| T otal automoti\nve rev"
+      },
+      {
+        "page": 30,
+        "type": "table",
+        "preview": "| In millions of USD | 4Q 2021\n- | 1Q 2022\n- | 2Q 2022\n- | 3Q 2022\n- | 4Q 2022\n- | 1Q 2023\n- | 2Q 2023\n- | 3Q 2023\n- | 4Q 2023\n- | 1Q 2024\n- | 2Q 2024\n- | 3Q 2024\n- |\n| --- | --- | --- | --- | --- | -"
+      }
+    ]
+  },
+  {
+    "id": "TC_038",
+    "test_type": "generation_focus",
+    "question": "Verify Q3 2024 free cash flow using operating cash flow less capital expenditures.",
+    "expected_page": 28,
+    "ground_truth": "2,742 million USD (6,255 \u2212 3,513).",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      3,
+      30,
+      1,
+      3,
+      5
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "The Q3 2024 free cash flow is reported as $2.7\u202fB. Using the operating cash flow of $6.3\u202fB (from the summary) and capital expenditures of $3.5\u202fB (approximately $3,513\u202fM from the financial table), the calculation $6.3\u202fB\u202f\u2212\u202f$3.5\u202fB \u2248 $2.8\u202fB aligns with the reported $2.7\u202fB free cash flow.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_2",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 3,
+        "chunk_type": "text",
+        "bbox": [
+          70.19,
+          81.17,
+          1521.67,
+          755.49
+        ],
+        "rerank_score": 3.0604
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_55",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 30,
+        "chunk_type": "table",
+        "bbox": [
+          72.2,
+          125.57,
+          1510.79,
+          382.61
+        ],
+        "rerank_score": -2.2261
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_7",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 5,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1326.99,
+          861.09
+        ],
+        "rerank_score": -2.6843
+      }
+    ],
+    "latency_seconds": 15.86,
+    "retrieved_chunks_preview": [
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 30,
+        "type": "table",
+        "preview": "| In millions of USD | 1Q 2021\n- | 2Q 2021\n- | 3Q 2021\n- | 4Q 2021\n- | 1Q 2022\n- | 2Q 2022\n- | 3Q 2022\n- | 4Q 2022\n- | 1Q 2023\n- | 2Q 2023\n- | 3Q 2023\n- | 4Q 2023\n- | 1Q 2024\n- | 2Q 2024\n- | 3Q 2024\n-"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "The Energy business achieved another strong quarter with a record gross margin. \nAdditionally, the Megafactory in Lathrop produced 200 Megapacks in a week, and \nPowerwall deployments reached a record "
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      }
+    ]
+  },
+  {
+    "id": "TC_039",
+    "test_type": "generation_focus",
+    "question": "How did Q3 2024 free cash flow compare with Q2 2024?",
+    "expected_page": 4,
+    "ground_truth": "It increased by 1,400 million USD (2,742 \u2212 1,342).",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      3,
+      4,
+      6,
+      29,
+      31
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Free cash flow was $2.7\u202fbillion in Q3\u202f2024, up from $1.342\u202fbillion in Q2\u202f2024 \u2013 an increase of roughly $1.4\u202fbillion.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_2",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 3,
+        "chunk_type": "text",
+        "bbox": [
+          70.19,
+          81.17,
+          1521.67,
+          755.49
+        ],
+        "rerank_score": 3.2986
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_6",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 4,
+        "chunk_type": "table",
+        "bbox": [
+          72.66,
+          123.95,
+          1510.79,
+          798.38
+        ],
+        "rerank_score": 0.9433
+      }
+    ],
+    "latency_seconds": 30.19,
+    "retrieved_chunks_preview": [
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 4,
+        "type": "table",
+        "preview": "| ($ i n milli ons except percentages and per sh are d ata)\n, | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| T otal automoti\nve rev"
+      },
+      {
+        "page": 6,
+        "type": "table",
+        "preview": "|  | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| M od el 3/Y prod ucti\non | 416 800\n, | 476 777\n, | 412 376\n, | 386 576\n, | 443 66"
+      },
+      {
+        "page": 29,
+        "type": "text",
+        "preview": "R E C O N C I L I A T I O N O F G A A P T O N O N \u2013 G A A P F I N A N C I A L I N F O R M A T I O N \n(Unaudited)\n\nIn millions of USD or shares as applicable, except per share data\nQ3-2023\nQ4-2023\nQ1-2"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      }
+    ]
+  },
+  {
+    "id": "TC_040",
+    "test_type": "generation_focus",
+    "question": "Calculate the Q3 2024 total vehicle deliveries from Model 3/Y and other models deliveries.",
+    "expected_page": 6,
+    "ground_truth": "462,890 vehicles (439,975 + 22,915).",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      7,
+      3,
+      10,
+      31,
+      5
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Not found in the document.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_11",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 7,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1500.47,
+          861.09
+        ],
+        "rerank_score": 4.6931
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_2",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 3,
+        "chunk_type": "text",
+        "bbox": [
+          70.19,
+          81.17,
+          1521.67,
+          755.49
+        ],
+        "rerank_score": 3.0653
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_18",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 10,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1332.5,
+          861.09
+        ],
+        "rerank_score": 2.6312
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_7",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 5,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1326.99,
+          861.09
+        ],
+        "rerank_score": -0.5679
+      }
+    ],
+    "latency_seconds": 21.01,
+    "retrieved_chunks_preview": [
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 10,
+        "type": "text",
+        "preview": "O U T L O O K\n\nVolume\nOur company is currently between two major growth waves: the first one began with the global expansion of the Model 3/Y platform \nand we believe the next one will be initiated by"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      }
+    ]
+  },
+  {
+    "id": "TC_041",
+    "test_type": "generation_focus",
+    "question": "What was the Q3 2024 year-over-year increase in total vehicle deliveries, in units?",
+    "expected_page": 6,
+    "ground_truth": "27,831 vehicles (462,890 \u2212 435,059).",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      7,
+      3,
+      10,
+      5,
+      1
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Not found in the document.",
+    "retrieved_chunk_count": 5,
+    "citations": [],
+    "latency_seconds": 13.66,
+    "retrieved_chunks_preview": [
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 10,
+        "type": "text",
+        "preview": "O U T L O O K\n\nVolume\nOur company is currently between two major growth waves: the first one began with the global expansion of the Model 3/Y platform \nand we believe the next one will be initiated by"
+      },
+      {
+        "page": 5,
+        "type": "text",
+        "preview": "F I N A N C I A L S U M M A R Y\n\nRevenue\nTotal revenue increased 8% YoY in Q3 to $25.2B. YoY, revenue was impacted by the following items:\n\n+ growth in vehicle deliveries\n+ growth in Energy Generation"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      }
+    ]
+  },
+  {
+    "id": "TC_042",
+    "test_type": "generation_focus",
+    "question": "How many more Model 3/Y vehicles than other-model vehicles were delivered in Q3 2024?",
+    "expected_page": 6,
+    "ground_truth": "417,060 vehicles (439,975 \u2212 22,915).",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      7,
+      10,
+      3,
+      8,
+      1
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Not found in the document.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_11",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 7,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1500.47,
+          861.09
+        ],
+        "rerank_score": 5.4143
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_18",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 10,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1332.5,
+          861.09
+        ],
+        "rerank_score": 3.6691
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_2",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 3,
+        "chunk_type": "text",
+        "bbox": [
+          70.19,
+          81.17,
+          1521.67,
+          755.49
+        ],
+        "rerank_score": 3.2053
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_14",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 8,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.53,
+          1485.24,
+          861.09
+        ],
+        "rerank_score": -0.4021
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_0",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 1,
+        "chunk_type": "scanned_text",
+        "bbox": [
+          626.04,
+          429.48,
+          1536.48,
+          857.16
+        ],
+        "rerank_score": -1.4544
+      }
+    ],
+    "latency_seconds": 19.76,
+    "retrieved_chunks_preview": [
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 10,
+        "type": "text",
+        "preview": "O U T L O O K\n\nVolume\nOur company is currently between two major growth waves: the first one began with the global expansion of the Model 3/Y platform \nand we believe the next one will be initiated by"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 8,
+        "type": "text",
+        "preview": "C O R E   T E C H N O L O G Y\n\nArtificial Intelligence Software and Hardware\n\nIn Q3, we released the 12.5 series of FSD (Supervised)1  with improved safety and comfort \nthanks to increased data and tr"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      }
+    ]
+  },
+  {
+    "id": "TC_043",
+    "test_type": "generation_focus",
+    "question": "Compare Q3 2024 total production with total deliveries. How many more vehicles were produced than delivered?",
+    "expected_page": 6,
+    "ground_truth": "6,906 vehicles (469,796 \u2212 462,890).",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      7,
+      3,
+      10,
+      1,
+      31
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Not found in the document.",
+    "retrieved_chunk_count": 5,
+    "citations": [],
+    "latency_seconds": 18.47,
+    "retrieved_chunks_preview": [
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 10,
+        "type": "text",
+        "preview": "O U T L O O K\n\nVolume\nOur company is currently between two major growth waves: the first one began with the global expansion of the Model 3/Y platform \nand we believe the next one will be initiated by"
+      },
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      }
+    ]
+  },
+  {
+    "id": "TC_044",
+    "test_type": "generation_focus",
+    "question": "What does Tesla's definition of vehicle deliveries include, and what does it exclude or require?",
+    "expected_page": 31,
+    "ground_truth": "Only vehicles transferred to end customers with all paperwork correctly completed.",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      31,
+      31,
+      31,
+      6,
+      3
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "Tesla defines vehicle deliveries as only those vehicles that have been transferred to end customers with all paperwork correctly completed. Vehicles not yet transferred or without complete paperwork are not counted as deliveries.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_58",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 31,
+        "chunk_type": "text",
+        "bbox": [
+          72.18,
+          77.52,
+          1514.59,
+          342.32
+        ],
+        "rerank_score": 1.729
+      }
+    ],
+    "latency_seconds": 9.55,
+    "retrieved_chunks_preview": [
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "Certain statements in this update, including, but not limited to, statements in the \u201cOutlook\u201d section; statements relating to the development, strategy, ramp, production and capacity, demand and marke"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "FORWARD-LOOKING STATEMENTS\n\nCertain statements in this update, including, but not limited to, statements in the \u201cOutlook\u201d section; statements relating to the development, strategy, ramp, production an"
+      },
+      {
+        "page": 6,
+        "type": "text",
+        "preview": "O P E R A T I O N A L S U M M A R Y\n(Unaudited)\n\n6\n\n(1)Days of supply is calculated by dividing new vehicle ending inventory by the relevant quarter\u2019s deliveries and using 75 trading days (aligned wit"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "The Energy business achieved another strong quarter with a record gross margin. \nAdditionally, the Megafactory in Lathrop produced 200 Megapacks in a week, and \nPowerwall deployments reached a record "
+      }
+    ]
+  },
+  {
+    "id": "TC_045",
+    "test_type": "generation_focus",
+    "question": "Explain how Tesla defines free cash flow in this update.",
+    "expected_page": 31,
+    "ground_truth": "Operating cash flow less capital expenditures.",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      31,
+      31,
+      31,
+      31,
+      3
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "Tesla defines free cash flow as operating cash flow less capital expenditures.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_58",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 31,
+        "chunk_type": "text",
+        "bbox": [
+          72.18,
+          77.52,
+          1514.59,
+          342.32
+        ],
+        "rerank_score": 0.9546
+      }
+    ],
+    "latency_seconds": 25.77,
+    "retrieved_chunks_preview": [
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "NON-GAAP FINANCIAL INFORMATION\n\nConsolidated financial information has been presented in accordance with GAAP as well as on a non-GAAP basis to supplement our consolidated financial results. Our non-G"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "Certain statements in this update, including, but not limited to, statements in the \u201cOutlook\u201d section; statements relating to the development, strategy, ramp, production and capacity, demand and marke"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "FORWARD-LOOKING STATEMENTS\n\nCertain statements in this update, including, but not limited to, statements in the \u201cOutlook\u201d section; statements relating to the development, strategy, ramp, production an"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      }
+    ]
+  },
+  {
+    "id": "TC_046",
+    "test_type": "generation_focus",
+    "question": "Calculate Q3 2024 total current assets less total current liabilities.",
+    "expected_page": 27,
+    "ground_truth": "25,802 million USD (56,379 \u2212 30,577).",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      1,
+      3,
+      31,
+      4,
+      29
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Not found in the document.",
+    "retrieved_chunk_count": 5,
+    "citations": [],
+    "latency_seconds": 16.83,
+    "retrieved_chunks_preview": [
+      {
+        "page": 1,
+        "type": "scanned_text",
+        "preview": "Q3 2024 Update\n\nTE 5 la"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      },
+      {
+        "page": 4,
+        "type": "table",
+        "preview": "| ($ i n milli ons except percentages and per sh are d ata)\n, | Q3 2023\n- | Q4 2023\n- | Q1 2024\n- | Q2 2024\n- | Q3 2024\n- | Y Y\no |\n| --- | --- | --- | --- | --- | --- | --- |\n| T otal automoti\nve rev"
+      },
+      {
+        "page": 29,
+        "type": "text",
+        "preview": "R E C O N C I L I A T I O N O F G A A P T O N O N \u2013 G A A P F I N A N C I A L I N F O R M A T I O N \n(Unaudited)\n\nIn millions of USD or shares as applicable, except per share data\nQ3-2023\nQ4-2023\nQ1-2"
+      }
+    ]
+  },
+  {
+    "id": "TC_047",
+    "test_type": "generation_focus",
+    "question": "Calculate total debt and finance leases at September 30, 2024 by combining current and non-current portions.",
+    "expected_page": 27,
+    "ground_truth": "7,696 million USD (2,291 + 5,405).",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      31,
+      7,
+      30,
+      10,
+      3
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Not found in the document.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_58",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 31,
+        "chunk_type": "text",
+        "bbox": [
+          72.18,
+          77.52,
+          1514.59,
+          342.32
+        ],
+        "rerank_score": -1.8683
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_11",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 7,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1500.47,
+          861.09
+        ],
+        "rerank_score": -7.3339
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_57",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 30,
+        "chunk_type": "table",
+        "bbox": [
+          72.2,
+          453.96,
+          1510.79,
+          713.16
+        ],
+        "rerank_score": -8.6595
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_18",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 10,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1332.5,
+          861.09
+        ],
+        "rerank_score": -8.7199
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_2",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 3,
+        "chunk_type": "text",
+        "bbox": [
+          70.19,
+          81.17,
+          1521.67,
+          755.49
+        ],
+        "rerank_score": -8.9848
+      }
+    ],
+    "latency_seconds": 27.31,
+    "retrieved_chunks_preview": [
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      },
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 30,
+        "type": "table",
+        "preview": "| In millions of USD | 4Q 2021\n- | 1Q 2022\n- | 2Q 2022\n- | 3Q 2022\n- | 4Q 2022\n- | 1Q 2023\n- | 2Q 2023\n- | 3Q 2023\n- | 4Q 2023\n- | 1Q 2024\n- | 2Q 2024\n- | 3Q 2024\n- |\n| --- | --- | --- | --- | --- | -"
+      },
+      {
+        "page": 10,
+        "type": "text",
+        "preview": "O U T L O O K\n\nVolume\nOur company is currently between two major growth waves: the first one began with the global expansion of the Model 3/Y platform \nand we believe the next one will be initiated by"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      }
+    ]
+  },
+  {
+    "id": "TC_048",
+    "test_type": "generation_focus",
+    "question": "How did cash, cash equivalents and investments change from June 30 to September 30, 2024?",
+    "expected_page": 27,
+    "ground_truth": "Increased by 2,928 million USD (33,648 \u2212 30,720).",
+    "retrieval_hit": false,
+    "retrieved_pages": [
+      3,
+      31,
+      30,
+      3,
+      30
+    ],
+    "must_include_passed": false,
+    "must_not_include_passed": true,
+    "generated_answer": "Cash, cash equivalents and investments increased by $2.9\u202fbillion from June\u202f30\u202f2024 to September\u202f30\u202f2024.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_2",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 3,
+        "chunk_type": "text",
+        "bbox": [
+          70.19,
+          81.17,
+          1521.67,
+          755.49
+        ],
+        "rerank_score": -6.7127
+      }
+    ],
+    "latency_seconds": 31.81,
+    "retrieved_chunks_preview": [
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "The Energy business achieved another strong quarter with a record gross margin. \nAdditionally, the Megafactory in Lathrop produced 200 Megapacks in a week, and \nPowerwall deployments reached a record "
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      },
+      {
+        "page": 30,
+        "type": "table",
+        "preview": "| In millions of USD | 1Q 2021\n- | 2Q 2021\n- | 3Q 2021\n- | 4Q 2021\n- | 1Q 2022\n- | 2Q 2022\n- | 3Q 2022\n- | 4Q 2022\n- | 1Q 2023\n- | 2Q 2023\n- | 3Q 2023\n- | 4Q 2023\n- | 1Q 2024\n- | 2Q 2024\n- | 3Q 2024\n-"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      },
+      {
+        "page": 30,
+        "type": "table",
+        "preview": "| In millions of USD | 4Q 2021\n- | 1Q 2022\n- | 2Q 2022\n- | 3Q 2022\n- | 4Q 2022\n- | 1Q 2023\n- | 2Q 2023\n- | 3Q 2023\n- | 4Q 2023\n- | 1Q 2024\n- | 2Q 2024\n- | 3Q 2024\n- |\n| --- | --- | --- | --- | --- | -"
+      }
+    ]
+  },
+  {
+    "id": "TC_049",
+    "test_type": "generation_focus",
+    "question": "Summarize Tesla's stated 2024 delivery and energy-storage deployment outlook without treating it as a reported result.",
+    "expected_page": 10,
+    "ground_truth": "Tesla expected slight growth in vehicle deliveries in 2024 and expected energy storage deployments to more than double year over year.",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      31,
+      31,
+      31,
+      10,
+      9
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "Tesla says it expects a slight increase in vehicle deliveries in 2024 and expects energy\u2011storage deployments to more than double year\u2011over\u2011year in 2024.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_18",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 10,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1332.5,
+          861.09
+        ],
+        "rerank_score": 0.6337
+      }
+    ],
+    "latency_seconds": 23.76,
+    "retrieved_chunks_preview": [
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "A D D I T I O N A L I N F O R M A T I O N\n\nWEBCAST INFORMATION\n\nTesla will provide a live webcast of its third quarter 2024 financial results conference call beginning at 4:30 p.m. CT on October 23, 2"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "FORWARD-LOOKING STATEMENTS\n\nCertain statements in this update, including, but not limited to, statements in the \u201cOutlook\u201d section; statements relating to the development, strategy, ramp, production an"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "Certain statements in this update, including, but not limited to, statements in the \u201cOutlook\u201d section; statements relating to the development, strategy, ramp, production and capacity, demand and marke"
+      },
+      {
+        "page": 10,
+        "type": "text",
+        "preview": "O U T L O O K\n\nVolume\nOur company is currently between two major growth waves: the first one began with the global expansion of the Model 3/Y platform \nand we believe the next one will be initiated by"
+      },
+      {
+        "page": 9,
+        "type": "text",
+        "preview": "O T H E R   H I G H L I G H T S\n\nOur Energy and Services and Other businesses are becoming increasingly profitable parts of \nTesla. As energy storage products continue to ramp and our vehicle fleet co"
+      }
+    ]
+  },
+  {
+    "id": "TC_050",
+    "test_type": "generation_focus",
+    "question": "What timing did Tesla give for start of production of its new, more affordable vehicle models?",
+    "expected_page": 10,
+    "ground_truth": "The first half of 2025.",
+    "retrieval_hit": true,
+    "retrieved_pages": [
+      7,
+      31,
+      31,
+      10,
+      3
+    ],
+    "must_include_passed": true,
+    "must_not_include_passed": true,
+    "generated_answer": "Tesla said the start of production for its new, more affordable vehicle models is planned for the first half of 2025.",
+    "retrieved_chunk_count": 5,
+    "citations": [
+      {
+        "chunk_id": "eval_tsla_q3_2024_18",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 10,
+        "chunk_type": "text",
+        "bbox": [
+          48.24,
+          77.52,
+          1332.5,
+          861.09
+        ],
+        "rerank_score": -1.7484
+      },
+      {
+        "chunk_id": "eval_tsla_q3_2024_2",
+        "doc_id": "eval_tsla_q3_2024",
+        "page_number": 3,
+        "chunk_type": "text",
+        "bbox": [
+          70.19,
+          81.17,
+          1521.67,
+          755.49
+        ],
+        "rerank_score": -3.2064
+      }
+    ],
+    "latency_seconds": 23.47,
+    "retrieved_chunks_preview": [
+      {
+        "page": 7,
+        "type": "text",
+        "preview": "V E H I C L E C A P A C I T Y\n\nProduction and delivery volumes both returned to year-on-year growth in Q3. We also \nproduced our 7-millionth vehicle October 22nd. We continued to add to our vehicle li"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "FORWARD-LOOKING STATEMENTS\n\nCertain statements in this update, including, but not limited to, statements in the \u201cOutlook\u201d section; statements relating to the development, strategy, ramp, production an"
+      },
+      {
+        "page": 31,
+        "type": "text",
+        "preview": "Certain statements in this update, including, but not limited to, statements in the \u201cOutlook\u201d section; statements relating to the development, strategy, ramp, production and capacity, demand and marke"
+      },
+      {
+        "page": 10,
+        "type": "text",
+        "preview": "O U T L O O K\n\nVolume\nOur company is currently between two major growth waves: the first one began with the global expansion of the Model 3/Y platform \nand we believe the next one will be initiated by"
+      },
+      {
+        "page": 3,
+        "type": "text",
+        "preview": "S U M M A R Y\nH I G H L I G H T S\n\nProfitability\n$2.7B GAAP operating income in Q3\n\n$2.2B GAAP net income in Q3\n\n$2.5B non-GAAP net income1 in Q3\n\nCash\nOperating cash flow of $6.3B in Q3\n\nFree cash fl"
+      }
+    ]
+  }
+]
