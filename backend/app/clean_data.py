@@ -23,7 +23,7 @@ def clean_extracted_items(
 ) -> List[Dict[str, Any]]:
     structured_bboxes: Dict[int, List[List[float]]] = {}
     for item in items:
-        if item.get("type") in ("table", "chart", "image") and item.get("bbox"):
+        if item.get("type") in ("chart", "image") and item.get("bbox"):
             structured_bboxes.setdefault(item["page_number"], []).append(item["bbox"])
 
     seen = set()
@@ -36,13 +36,6 @@ def clean_extracted_items(
 
         page = item.get("page_number", 0)
         item_type = item.get("type", "")
-
-        if item_type == "text" and item.get("bbox"):
-            if any(
-                _overlap_ratio(item["bbox"], region) >= overlap_threshold
-                for region in structured_bboxes.get(page, [])
-            ):
-                continue
 
         key = (page, item_type, norm)
         if key in seen:

@@ -85,7 +85,6 @@ def extract_data(
             # Step 2a: Extract Financial Tables
             page_tables = extract_page_tables(page, page_number)
             for tbl in page_tables:
-                page_ignore_rects.append(tbl["bbox"])
                 all_extracted_items.append(
                     {
                         "page_number": page_number,
@@ -164,11 +163,11 @@ def extract_data(
                     }
                 )
 
-            # Step 2d: Extract Narrative Text (skipping ignore_rects)
+            # Step 2d: Extract Narrative Text (preserve all readable text blocks)
             page_text_blocks = extract_page_text_blocks(
                 page=page,
                 page_number=page_number,
-                ignore_rects=page_ignore_rects,
+                ignore_rects=None,
             )
             for txt_block in page_text_blocks:
                 all_extracted_items.append(

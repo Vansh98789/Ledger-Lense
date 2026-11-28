@@ -1,0 +1,526 @@
+{
+  "summary": {
+    "timestamp": "2026-11-28T16:20:34.132226",
+    "split": "dev",
+    "tag": "tuned_v3",
+    "total_tests": 26,
+    "total_time_seconds": 122.0,
+    "avg_latency_seconds": 4.69,
+    "metrics": {
+      "retrieval_hit_at_5_pct": 96.15,
+      "retrieval_mrr": 0.814,
+      "correctness_pct": 100.0,
+      "faithfulness_pct": 100.0
+    },
+    "counts": {
+      "retrieval_hits": "25/26",
+      "correctness_passes": "1/1",
+      "faithfulness_passes": "1/1"
+    }
+  },
+  "results": [
+    {
+      "id": "TC_001",
+      "test_stage": "retrieval",
+      "question": "What was Total Automotive Revenues in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        4,
+        26,
+        4,
+        3,
+        6
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 4.41
+    },
+    {
+      "id": "TC_002",
+      "test_stage": "retrieval",
+      "question": "What was Total Energy Generation and Storage Revenue in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        4,
+        26,
+        9,
+        5,
+        4
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 3.03
+    },
+    {
+      "id": "TC_003",
+      "test_stage": "retrieval",
+      "question": "What was Total Services and Other Revenue in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        4,
+        26,
+        5,
+        6,
+        3
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 3.11
+    },
+    {
+      "id": "TC_004",
+      "test_stage": "retrieval",
+      "question": "What was Tesla's Total Revenue in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        4,
+        26,
+        6,
+        9,
+        31
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 2.58
+    },
+    {
+      "id": "TC_005",
+      "test_stage": "retrieval",
+      "question": "What was Total Gross Profit in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        4,
+        3,
+        26,
+        9,
+        4
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 3.09
+    },
+    {
+      "id": "TC_006",
+      "test_stage": "retrieval",
+      "question": "What was Total GAAP Gross Margin in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        4,
+        3,
+        9,
+        4,
+        26
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 2.77
+    },
+    {
+      "id": "TC_007",
+      "test_stage": "retrieval",
+      "question": "What was Income from Operations in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        3,
+        28,
+        28,
+        4,
+        26
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.25,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 2.81
+    },
+    {
+      "id": "TC_008",
+      "test_stage": "retrieval",
+      "question": "What was Operating Margin in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        4,
+        3,
+        28,
+        28,
+        5
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 2.88
+    },
+    {
+      "id": "TC_009",
+      "test_stage": "retrieval",
+      "question": "What was Adjusted EBITDA in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        4,
+        23,
+        24,
+        31,
+        28
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 2.52
+    },
+    {
+      "id": "TC_010",
+      "test_stage": "retrieval",
+      "question": "What was diluted GAAP EPS attributable to common stockholders in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        4,
+        29,
+        30,
+        31,
+        26
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 2.78
+    },
+    {
+      "id": "TC_011",
+      "test_stage": "retrieval",
+      "question": "How much net cash was provided by operating activities in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        28,
+        28,
+        30,
+        4,
+        3
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.25,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 2.58
+    },
+    {
+      "id": "TC_012",
+      "test_stage": "retrieval",
+      "question": "What were Capital Expenditures in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        4,
+        28,
+        30,
+        28,
+        30
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 2.7
+    },
+    {
+      "id": "TC_013",
+      "test_stage": "retrieval",
+      "question": "What was Free Cash Flow in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        3,
+        28,
+        23,
+        28,
+        24
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 2.56
+    },
+    {
+      "id": "TC_014",
+      "test_stage": "retrieval",
+      "question": "How many Model 3/Y vehicles were produced in Q3 2024?",
+      "expected_page": 6,
+      "retrieved_pages": [
+        7,
+        6,
+        10,
+        8,
+        3
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.5,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 2.56
+    },
+    {
+      "id": "TC_015",
+      "test_stage": "retrieval",
+      "question": "How many total vehicles were delivered in Q3 2024?",
+      "expected_page": 6,
+      "retrieved_pages": [
+        6,
+        7,
+        3,
+        10,
+        23
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 2.77
+    },
+    {
+      "id": "TC_016",
+      "test_stage": "retrieval",
+      "question": "How many Other Models were delivered in Q3 2024?",
+      "expected_page": 6,
+      "retrieved_pages": [
+        6,
+        7,
+        3,
+        8,
+        10
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 2.73
+    },
+    {
+      "id": "TC_017",
+      "test_stage": "retrieval",
+      "question": "What was global vehicle inventory in days of supply in Q3 2024?",
+      "expected_page": 6,
+      "retrieved_pages": [
+        6,
+        31,
+        7,
+        10,
+        3
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 3.27
+    },
+    {
+      "id": "TC_018",
+      "test_stage": "retrieval",
+      "question": "How much energy storage was deployed in Q3 2024?",
+      "expected_page": 6,
+      "retrieved_pages": [
+        9,
+        10,
+        6,
+        4,
+        3
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 3.17
+    },
+    {
+      "id": "TC_019",
+      "test_stage": "retrieval",
+      "question": "How many Supercharger connectors did Tesla have at the end of Q3 2024?",
+      "expected_page": 6,
+      "retrieved_pages": [
+        6,
+        8,
+        9,
+        7,
+        6
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 3.16
+    },
+    {
+      "id": "TC_020",
+      "test_stage": "retrieval",
+      "question": "What was the installed annual capacity for Model 3/Y at the Shanghai factory?",
+      "expected_page": 7,
+      "retrieved_pages": [
+        7,
+        6,
+        10,
+        9,
+        8
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 2.44
+    },
+    {
+      "id": "TC_021",
+      "test_stage": "retrieval",
+      "question": "What H100 cluster size was deployed at Gigafactory Texas in Q3 2024?",
+      "expected_page": 8,
+      "retrieved_pages": [
+        8,
+        7,
+        6,
+        3,
+        1
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 3.4
+    },
+    {
+      "id": "TC_022",
+      "test_stage": "retrieval",
+      "question": "What was the Q3 2024 Energy business gross margin?",
+      "expected_page": 9,
+      "retrieved_pages": [
+        9,
+        4,
+        3,
+        26,
+        28
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 2.82
+    },
+    {
+      "id": "TC_023",
+      "test_stage": "retrieval",
+      "question": "How many Powerwalls were enrolled in Virtual Power Plant programs as of Q3 2024?",
+      "expected_page": 9,
+      "retrieved_pages": [
+        9,
+        8,
+        3,
+        1,
+        28
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 3.06
+    },
+    {
+      "id": "TC_024",
+      "test_stage": "retrieval",
+      "question": "What does the chart on page 23 call its quarterly cash flow metrics?",
+      "expected_page": 23,
+      "retrieved_pages": [
+        31,
+        24,
+        23,
+        4,
+        6
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 3.96
+    },
+    {
+      "id": "TC_025",
+      "test_stage": "retrieval",
+      "question": "What was Tesla's total assets balance at September 30, 2024?",
+      "expected_page": 27,
+      "retrieved_pages": [
+        31,
+        27,
+        7,
+        6,
+        4
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.5,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 3.88
+    },
+    {
+      "id": "TC_026",
+      "test_stage": "generation",
+      "question": "Calculate Q3 2024 total revenue from automotive, energy generation and storage, and services and other revenue.",
+      "expected_page": 4,
+      "retrieved_pages": [
+        4,
+        26,
+        5,
+        9,
+        4
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "The combined Q3\u202f2024 revenue from automotive (20,016\u202fmillion), energy generation and storage (2,376\u202fmillion), and services and other (2,790\u202fmillion) equals 25,182\u202fmillion USD.",
+      "ground_truth": "25,182 million USD (20,016 + 2,376 + 2,790).",
+      "correctness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer accurately calculates the exact total revenue using the correct figures from the ground truth without rounding or errors."
+      },
+      "faithfulness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "All numbers and the resulting sum are directly supported by the provided context (Chunk 0)."
+      },
+      "latency_seconds": 46.9
+    }
+  ]
+}

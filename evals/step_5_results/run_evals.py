@@ -208,6 +208,7 @@ def run_evaluation(split: str = "dev", limit: Optional[int] = None, tag: str = "
                 user_id=USER_ID,
                 doc_ids=[DOC_ID],
                 top_k=5,
+                prompt_version="v2",
             )
             generated_answer = ans_res.get("answer", "")
             chunks = ans_res.get("retrieved_chunks", [])
