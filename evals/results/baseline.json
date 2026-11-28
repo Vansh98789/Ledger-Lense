@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-11-28T12:46:07.743485",
+  "split": "dev",
+  "tag": "baseline",
+  "total_tests": 2,
+  "total_time_seconds": 3.6,
+  "avg_latency_seconds": 1.82,
+  "metrics": {
+    "retrieval_hit_at_5_pct": 100.0,
+    "retrieval_mrr": 0.667,
+    "correctness_pct": 0.0,
+    "faithfulness_pct": 0.0
+  },
+  "counts": {
+    "retrieval_hits": "2/2",
+    "correctness_passes": "0/0",
+    "faithfulness_passes": "0/0"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "timestamp": "2026-11-28T12:46:07.743485",
+    "split": "dev",
+    "tag": "baseline",
+    "total_tests": 2,
+    "total_time_seconds": 3.6,
+    "avg_latency_seconds": 1.82,
+    "metrics": {
+      "retrieval_hit_at_5_pct": 100.0,
+      "retrieval_mrr": 0.667,
+      "correctness_pct": 0.0,
+      "faithfulness_pct": 0.0
+    },
+    "counts": {
+      "retrieval_hits": "2/2",
+      "correctness_passes": "0/0",
+      "faithfulness_passes": "0/0"
+    }
+  },
+  "results": [
+    {
+      "id": "TC_001",
+      "test_stage": "retrieval",
+      "question": "What was Total Automotive Revenues in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        4,
+        3,
+        5,
+        7,
+        31
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 2.14
+    },
+    {
+      "id": "TC_002",
+      "test_stage": "retrieval",
+      "question": "What was Total Energy Generation and Storage Revenue in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        9,
+        5,
+        4,
+        3,
+        10
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.51
+    }
+  ]
+}

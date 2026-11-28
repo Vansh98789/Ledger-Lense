@@ -1,0 +1,962 @@
+{
+  "source": "TSLA-Q3-2024-Update.pdf",
+  "description": "50 NEW evaluation cases (25 retrieval, 25 generation): 15 balance sheet/energy, 10 acronym, 15 numerical precision, 10 unanswerable. Page numbers are printed PDF page numbers; page null = unanswerable.",
+  "retrieval_tests": [
+    {
+      "id": "TEST_001",
+      "category": "retrieval",
+      "question": "What was Tesla's inventory balance at September 30, 2024, in millions of USD?",
+      "expected_retrieval": {
+        "page": 27,
+        "table_or_section": "Balance Sheet – Current assets"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "14,530 million USD.",
+        "must_include": [
+          "14,530"
+        ],
+        "must_not_include": [
+          "14,195",
+          "16,033",
+          "14.5 billion"
+        ]
+      }
+    },
+    {
+      "id": "TEST_002",
+      "category": "retrieval",
+      "question": "What were accounts payable at September 30, 2024, in millions of USD?",
+      "expected_retrieval": {
+        "page": 27,
+        "table_or_section": "Balance Sheet – Current liabilities"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "14,654 million USD.",
+        "must_include": [
+          "14,654"
+        ],
+        "must_not_include": [
+          "13,056",
+          "14,725",
+          "14.7 billion"
+        ]
+      }
+    },
+    {
+      "id": "TEST_003",
+      "category": "retrieval",
+      "question": "What was net property, plant and equipment on the September 30, 2024 balance sheet?",
+      "expected_retrieval": {
+        "page": 27,
+        "table_or_section": "Balance Sheet – Assets"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "36,116 million USD.",
+        "must_include": [
+          "36,116"
+        ],
+        "must_not_include": [
+          "32,902",
+          "36.1 billion"
+        ]
+      }
+    },
+    {
+      "id": "TEST_004",
+      "category": "retrieval",
+      "question": "What was total stockholders' equity at September 30, 2024, excluding noncontrolling interests?",
+      "expected_retrieval": {
+        "page": 27,
+        "table_or_section": "Balance Sheet – Liabilities and Equity"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "69,931 million USD.",
+        "must_include": [
+          "69,931"
+        ],
+        "must_not_include": [
+          "66,468",
+          "709",
+          "70 billion"
+        ]
+      }
+    },
+    {
+      "id": "TEST_005",
+      "category": "retrieval",
+      "question": "How much non-recourse debt did Tesla report at September 30, 2024?",
+      "expected_retrieval": {
+        "page": 27,
+        "table_or_section": "Balance Sheet – Footnote (1) Breakdown of debt"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "7,379 million USD.",
+        "must_include": [
+          "7,379"
+        ],
+        "must_not_include": [
+          "7,355",
+          "4,820"
+        ]
+      }
+    },
+    {
+      "id": "TEST_006",
+      "category": "retrieval",
+      "question": "What was net cash used in investing activities in Q3 2024?",
+      "expected_retrieval": {
+        "page": 28,
+        "table_or_section": "Statement of Cash Flows – Investing activities"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "(2,875) million USD, i.e. 2,875 million USD used.",
+        "must_include": [
+          "2,875"
+        ],
+        "must_not_include": [
+          "3,225",
+          "5,084"
+        ]
+      }
+    },
+    {
+      "id": "TEST_007",
+      "category": "retrieval",
+      "question": "According to the Services and Other discussion, how many new Supercharger stalls were added in Q3 2024 and what was the YoY network growth?",
+      "expected_retrieval": {
+        "page": 9,
+        "table_or_section": "Other Highlights – Services and Other"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Over 2,800 new stalls, a 22% YoY growth of the network.",
+        "must_include": [
+          "2,800",
+          "22%"
+        ],
+        "must_not_include": [
+          "20%"
+        ]
+      }
+    },
+    {
+      "id": "TEST_008",
+      "category": "retrieval",
+      "question": "When is the Shanghai Megafactory expected to begin shipping Megapacks?",
+      "expected_retrieval": {
+        "page": 9,
+        "table_or_section": "Other Highlights – Energy Generation and Storage"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Q1 2025.",
+        "must_include": [
+          "Q1 2025"
+        ],
+        "must_not_include": [
+          "Q4 2024",
+          "2026"
+        ]
+      }
+    },
+    {
+      "id": "TEST_009",
+      "category": "retrieval",
+      "question": "In the Highlights page footnotes, what does SBC stand for, and how is it treated in non-GAAP net income?",
+      "expected_retrieval": {
+        "page": 3,
+        "table_or_section": "Highlights – Footnote (1)"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "SBC means stock-based compensation; non-GAAP net income excludes it, net of tax.",
+        "must_include": [
+          "stock-based compensation",
+          "excludes"
+        ],
+        "must_not_include": [
+          "includes SBC"
+        ]
+      }
+    },
+    {
+      "id": "TEST_010",
+      "category": "retrieval",
+      "question": "On the GAAP to non-GAAP reconciliation page, what was free cash flow (FCF) in 3Q-2023, in millions of USD?",
+      "expected_retrieval": {
+        "page": 30,
+        "table_or_section": "Reconciliation of GAAP to Non-GAAP – Free cash flow (non-GAAP), quarterly"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "848 million USD.",
+        "must_include": [
+          "848"
+        ],
+        "must_not_include": [
+          "2,742",
+          "2,064"
+        ]
+      }
+    },
+    {
+      "id": "TEST_011",
+      "category": "retrieval",
+      "question": "What does TTM stand for in the market share chart and the key metrics charts?",
+      "expected_retrieval": {
+        "page": 7,
+        "table_or_section": "Vehicle Capacity – Market share chart source note (also p.24, p.30)"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "TTM = trailing twelve months.",
+        "must_include": [
+          "trailing twelve months"
+        ],
+        "must_not_include": [
+          "trailing three months",
+          "total trailing market"
+        ]
+      }
+    },
+    {
+      "id": "TEST_012",
+      "category": "retrieval",
+      "question": "What does COGS stand for on the Highlights page, and what approximate per-vehicle COGS did Tesla report for Q3 2024?",
+      "expected_retrieval": {
+        "page": 3,
+        "table_or_section": "Highlights – Summary and footnote (5)"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Cost of goods sold; approximately $35,100 per vehicle, the lowest level ever.",
+        "must_include": [
+          "cost of goods sold",
+          "35,100"
+        ],
+        "must_not_include": [
+          "35,000",
+          "36,000"
+        ]
+      }
+    },
+    {
+      "id": "TEST_013",
+      "category": "retrieval",
+      "question": "How many Megapacks did the Lathrop Megafactory produce in a single week, and what annual run rate in GWh does Tesla attribute to that?",
+      "expected_retrieval": {
+        "page": 9,
+        "table_or_section": "Other Highlights – Energy Generation and Storage"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "200 Megapacks in a week, a 40 GWh annual run rate.",
+        "must_include": [
+          "200",
+          "40 GWh"
+        ],
+        "must_not_include": [
+          "20 GWh",
+          "100 GWh"
+        ]
+      }
+    },
+    {
+      "id": "TEST_014",
+      "category": "retrieval",
+      "question": "What was interest income in Q3 2024, in exact millions of USD?",
+      "expected_retrieval": {
+        "page": 26,
+        "table_or_section": "Statement of Operations"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "429 million USD.",
+        "must_include": [
+          "429"
+        ],
+        "must_not_include": [
+          "0.4 billion",
+          "348"
+        ]
+      }
+    },
+    {
+      "id": "TEST_015",
+      "category": "retrieval",
+      "question": "What was the provision for income taxes in Q3 2024, in exact millions of USD?",
+      "expected_retrieval": {
+        "page": 26,
+        "table_or_section": "Statement of Operations"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "601 million USD.",
+        "must_include": [
+          "601"
+        ],
+        "must_not_include": [
+          "393",
+          "0.6 billion"
+        ]
+      }
+    },
+    {
+      "id": "TEST_016",
+      "category": "retrieval",
+      "question": "What was research and development expense in Q3 2024, in exact millions of USD?",
+      "expected_retrieval": {
+        "page": 26,
+        "table_or_section": "Statement of Operations – Operating expenses"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "1,039 million USD.",
+        "must_include": [
+          "1,039"
+        ],
+        "must_not_include": [
+          "1,074",
+          "1.0 billion"
+        ]
+      }
+    },
+    {
+      "id": "TEST_017",
+      "category": "retrieval",
+      "question": "What was selling, general and administrative expense in Q3 2024, in exact millions of USD?",
+      "expected_retrieval": {
+        "page": 26,
+        "table_or_section": "Statement of Operations – Operating expenses"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "1,186 million USD.",
+        "must_include": [
+          "1,186"
+        ],
+        "must_not_include": [
+          "1,277",
+          "1.2 billion"
+        ]
+      }
+    },
+    {
+      "id": "TEST_018",
+      "category": "retrieval",
+      "question": "How much was reported as restructuring and other expense in Q3 2024, in exact millions of USD?",
+      "expected_retrieval": {
+        "page": 26,
+        "table_or_section": "Statement of Operations – Operating expenses"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "55 million USD.",
+        "must_include": [
+          "55"
+        ],
+        "must_not_include": [
+          "622"
+        ]
+      }
+    },
+    {
+      "id": "TEST_019",
+      "category": "retrieval",
+      "question": "How many diluted weighted average shares (in millions) were used for Q3 2024 net income per share?",
+      "expected_retrieval": {
+        "page": 26,
+        "table_or_section": "Statement of Operations – Weighted average shares"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "3,497 million shares.",
+        "must_include": [
+          "3,497"
+        ],
+        "must_not_include": [
+          "3,198",
+          "3,481"
+        ]
+      }
+    },
+    {
+      "id": "TEST_020",
+      "category": "retrieval",
+      "question": "What was total cost of revenues in Q3 2024, in exact millions of USD?",
+      "expected_retrieval": {
+        "page": 26,
+        "table_or_section": "Statement of Operations – Cost of revenues"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "20,185 million USD.",
+        "must_include": [
+          "20,185"
+        ],
+        "must_not_include": [
+          "20,922",
+          "20.2 billion"
+        ]
+      }
+    },
+    {
+      "id": "TEST_021",
+      "category": "retrieval",
+      "question": "What was Tesla's total revenue in Q4 2024?",
+      "expected_retrieval": {
+        "page": null,
+        "table_or_section": "N/A - not in document"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Not answerable: the document covers Q3 2024 and earlier; Q4 2024 revenue is not provided.",
+        "must_include": [
+          "not provided"
+        ],
+        "must_not_include": [
+          "25,182 million USD was Q4",
+          "billion in Q4 2024"
+        ]
+      }
+    },
+    {
+      "id": "TEST_022",
+      "category": "retrieval",
+      "question": "What was Tesla's closing share price on October 23, 2024?",
+      "expected_retrieval": {
+        "page": null,
+        "table_or_section": "N/A - not in document"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Not answerable: the document gives no stock price data (only the webcast date/time).",
+        "must_include": [
+          "not provided"
+        ],
+        "must_not_include": [
+          "$"
+        ]
+      }
+    },
+    {
+      "id": "TEST_023",
+      "category": "retrieval",
+      "question": "How many Cybertruck units were delivered in Q3 2024?",
+      "expected_retrieval": {
+        "page": null,
+        "table_or_section": "Operational Summary (only 'Other models' combined is reported)"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Not answerable: Cybertruck deliveries are not broken out; only combined 'Other models' deliveries are reported.",
+        "must_include": [
+          "not provided",
+          "Other models"
+        ],
+        "must_not_include": [
+          "Cybertruck deliveries were"
+        ]
+      }
+    },
+    {
+      "id": "TEST_024",
+      "category": "retrieval",
+      "question": "How many Model Y vehicles, separately from Model 3, were produced in Q3 2024?",
+      "expected_retrieval": {
+        "page": null,
+        "table_or_section": "Operational Summary (Model 3/Y reported combined)"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Not answerable: Model 3 and Model Y are reported combined (443,668 produced).",
+        "must_include": [
+          "not provided",
+          "combined"
+        ],
+        "must_not_include": [
+          "Model Y production was"
+        ]
+      }
+    },
+    {
+      "id": "TEST_025",
+      "category": "retrieval",
+      "question": "What was Tesla's Q3 2024 revenue in the United States versus China versus Europe?",
+      "expected_retrieval": {
+        "page": null,
+        "table_or_section": "N/A - not in document"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Not answerable: no regional revenue breakdown is provided; only market-share-by-region data.",
+        "must_include": [
+          "not provided"
+        ],
+        "must_not_include": [
+          "China revenue was",
+          "Europe revenue was"
+        ]
+      }
+    }
+  ],
+  "generation_tests": [
+    {
+      "id": "TEST_026",
+      "category": "generation",
+      "question": "Add total liabilities, redeemable noncontrolling interests, total stockholders' equity and noncontrolling interests at September 30, 2024. What total do you get and does it match the balance sheet?",
+      "expected_retrieval": {
+        "page": 27,
+        "table_or_section": "Balance Sheet – Liabilities and Equity"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "49,142 + 70 + 69,931 + 709 = 119,852 million USD, matching total liabilities and equity (and total assets).",
+        "must_include": [
+          "119,852"
+        ],
+        "must_not_include": [
+          "119.9 billion"
+        ]
+      }
+    },
+    {
+      "id": "TEST_027",
+      "category": "generation",
+      "question": "By how much did inventory change between June 30, 2024 and September 30, 2024, in millions of USD?",
+      "expected_retrieval": {
+        "page": 27,
+        "table_or_section": "Balance Sheet – Inventory"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Increased by 335 million USD (14,530 − 14,195).",
+        "must_include": [
+          "335",
+          "increase"
+        ],
+        "must_not_include": [
+          "decrease"
+        ]
+      }
+    },
+    {
+      "id": "TEST_028",
+      "category": "generation",
+      "question": "By how much did net accounts receivable change from June 30, 2024 to September 30, 2024?",
+      "expected_retrieval": {
+        "page": 27,
+        "table_or_section": "Balance Sheet – Accounts receivable, net"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Decreased by 424 million USD (3,313 − 3,737).",
+        "must_include": [
+          "424",
+          "decrease"
+        ],
+        "must_not_include": [
+          "increase of 424"
+        ]
+      }
+    },
+    {
+      "id": "TEST_029",
+      "category": "generation",
+      "question": "Compare energy storage deployed in Q3 2024 with Q2 2024 in GWh, and state the YoY growth Tesla reported.",
+      "expected_retrieval": {
+        "page": 6,
+        "table_or_section": "Operational Summary – Storage deployed (GWh); Other Highlights chart (p.9)"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Q3 2024 was 6.9 GWh vs 9.4 GWh in Q2 2024, a 2.5 GWh decrease; Tesla reports 75% YoY growth (vs 4.0 GWh in Q3 2023).",
+        "must_include": [
+          "2.5 GWh",
+          "75%"
+        ],
+        "must_not_include": [
+          "72.5%"
+        ]
+      }
+    },
+    {
+      "id": "TEST_030",
+      "category": "generation",
+      "question": "Reconcile Q3 2024 net cash provided by operating activities: list how net income plus the adjustments and working-capital changes sum to the total.",
+      "expected_retrieval": {
+        "page": 28,
+        "table_or_section": "Statement of Cash Flows – Operating activities"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "2,183 + 1,348 + 457 + 285 + 408 + 1,574 = 6,255 million USD.",
+        "must_include": [
+          "6,255",
+          "1,574",
+          "1,348"
+        ],
+        "must_not_include": [
+          "3,612"
+        ]
+      }
+    },
+    {
+      "id": "TEST_031",
+      "category": "generation",
+      "question": "What was total deferred revenue (current plus non-current) at September 30, 2024?",
+      "expected_retrieval": {
+        "page": 27,
+        "table_or_section": "Balance Sheet – Deferred revenue"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "6,381 million USD (3,031 + 3,350).",
+        "must_include": [
+          "6,381"
+        ],
+        "must_not_include": [
+          "6,150",
+          "6.4 billion"
+        ]
+      }
+    },
+    {
+      "id": "TEST_032",
+      "category": "generation",
+      "question": "What was the change in cash, cash equivalents and restricted cash during Q3 2024, and what were the beginning and ending balances?",
+      "expected_retrieval": {
+        "page": 28,
+        "table_or_section": "Statement of Cash Flows – bottom lines"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Increase of 3,620 million USD, from 15,354 to 18,974 million USD.",
+        "must_include": [
+          "3,620",
+          "15,354",
+          "18,974"
+        ],
+        "must_not_include": [
+          "33,648",
+          "2,890"
+        ]
+      }
+    },
+    {
+      "id": "TEST_033",
+      "category": "generation",
+      "question": "Starting from GAAP net income attributable to common stockholders in Q3 2024, which reconciling item bridges to the non-GAAP figure and what are the amounts?",
+      "expected_retrieval": {
+        "page": 29,
+        "table_or_section": "Reconciliation of GAAP to Non-GAAP – Net income"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "2,167 (GAAP) + 338 stock-based compensation net of tax = 2,505 million USD non-GAAP; no valuation allowance release in Q3 2024.",
+        "must_include": [
+          "2,167",
+          "338",
+          "2,505"
+        ],
+        "must_not_include": [
+          "5,927"
+        ]
+      }
+    },
+    {
+      "id": "TEST_034",
+      "category": "generation",
+      "question": "By how much did capex (capital expenditures) increase from Q2 2024 to Q3 2024, in millions of USD?",
+      "expected_retrieval": {
+        "page": 28,
+        "table_or_section": "Statement of Cash Flows – Capital expenditures"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Increased by 1,243 million USD (3,513 vs 2,270).",
+        "must_include": [
+          "1,243"
+        ],
+        "must_not_include": [
+          "1,400",
+          "1.2 billion"
+        ]
+      }
+    },
+    {
+      "id": "TEST_035",
+      "category": "generation",
+      "question": "Show how Adjusted EBITDA of 4,665 million USD in Q3 2024 is built from GAAP net income attributable to common stockholders.",
+      "expected_retrieval": {
+        "page": 29,
+        "table_or_section": "Reconciliation of GAAP to Non-GAAP – Adjusted EBITDA"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "2,167 + 92 interest expense + 601 income taxes + 1,348 D&A + 457 SBC = 4,665 million USD.",
+        "must_include": [
+          "4,665",
+          "92",
+          "601",
+          "1,348",
+          "457"
+        ],
+        "must_not_include": [
+          "3,674"
+        ]
+      }
+    },
+    {
+      "id": "TEST_036",
+      "category": "generation",
+      "question": "What does ASP stand for in the financial summary and how did S3XY ASP affect Q3 2024 revenue YoY?",
+      "expected_retrieval": {
+        "page": 5,
+        "table_or_section": "Financial Summary – Revenue drivers"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Average selling price; reduced S3XY ASP (excluding FX) negatively impacted revenue, due to mix, pricing and attractive financing options.",
+        "must_include": [
+          "average selling price",
+          "reduced"
+        ],
+        "must_not_include": [
+          "increased ASP"
+        ]
+      }
+    },
+    {
+      "id": "TEST_037",
+      "category": "generation",
+      "question": "What qualification does Tesla attach to FSD (Supervised) in the highlights and core technology pages?",
+      "expected_retrieval": {
+        "page": 8,
+        "table_or_section": "Core Technology – Footnote (1) (also p.3 footnote 4)"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Active driver supervision required; it does not make the vehicle autonomous.",
+        "must_include": [
+          "supervision",
+          "not"
+        ],
+        "must_not_include": [
+          "fully autonomous"
+        ]
+      }
+    },
+    {
+      "id": "TEST_038",
+      "category": "generation",
+      "question": "Calculate Energy generation and storage gross profit in Q3 2024 in exact millions of USD.",
+      "expected_retrieval": {
+        "page": 26,
+        "table_or_section": "Statement of Operations – Energy revenue less cost"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "725 million USD (2,376 − 1,651); about 30.5% gross margin.",
+        "must_include": [
+          "725"
+        ],
+        "must_not_include": [
+          "0.7 billion",
+          "623"
+        ]
+      }
+    },
+    {
+      "id": "TEST_039",
+      "category": "generation",
+      "question": "Calculate Services and other gross profit in Q3 2024 in exact millions of USD.",
+      "expected_retrieval": {
+        "page": 26,
+        "table_or_section": "Statement of Operations – Services and other revenue less cost"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "246 million USD (2,790 − 2,544).",
+        "must_include": [
+          "246"
+        ],
+        "must_not_include": [
+          "0.2 billion"
+        ]
+      }
+    },
+    {
+      "id": "TEST_040",
+      "category": "generation",
+      "question": "Calculate total automotive gross profit in Q3 2024 (total automotive revenues minus total automotive cost of revenues).",
+      "expected_retrieval": {
+        "page": 26,
+        "table_or_section": "Statement of Operations – Automotive"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "4,026 million USD (20,016 − 15,990).",
+        "must_include": [
+          "4,026"
+        ],
+        "must_not_include": [
+          "4.0 billion"
+        ]
+      }
+    },
+    {
+      "id": "TEST_041",
+      "category": "generation",
+      "question": "What was net interest income in Q3 2024 (interest income minus interest expense), in exact millions?",
+      "expected_retrieval": {
+        "page": 26,
+        "table_or_section": "Statement of Operations"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "337 million USD (429 − 92).",
+        "must_include": [
+          "337"
+        ],
+        "must_not_include": [
+          "0.3 billion"
+        ]
+      }
+    },
+    {
+      "id": "TEST_042",
+      "category": "generation",
+      "question": "Add R&D and SG&A in Q3 2024. What do they total and how does adding restructuring and other get to total operating expenses?",
+      "expected_retrieval": {
+        "page": 26,
+        "table_or_section": "Statement of Operations – Operating expenses"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "1,039 + 1,186 = 2,225; plus 55 restructuring and other = 2,280 million USD.",
+        "must_include": [
+          "2,225",
+          "2,280"
+        ],
+        "must_not_include": [
+          "2,973"
+        ]
+      }
+    },
+    {
+      "id": "TEST_043",
+      "category": "generation",
+      "question": "Starting from Q3 2024 net income, how do you arrive at net income attributable to common stockholders?",
+      "expected_retrieval": {
+        "page": 26,
+        "table_or_section": "Statement of Operations"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "2,183 less 16 attributable to noncontrolling interests = 2,167 million USD.",
+        "must_include": [
+          "2,183",
+          "16",
+          "2,167"
+        ],
+        "must_not_include": [
+          "1,478"
+        ]
+      }
+    },
+    {
+      "id": "TEST_044",
+      "category": "generation",
+      "question": "Verify trailing-twelve-month free cash flow at 3Q-2024 using TTM operating cash flow and TTM capital expenditures.",
+      "expected_retrieval": {
+        "page": 30,
+        "table_or_section": "Reconciliation – TTM free cash flow"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "14,479 − 10,862 = 3,617 million USD.",
+        "must_include": [
+          "3,617",
+          "14,479",
+          "10,862"
+        ],
+        "must_not_include": [
+          "2,742"
+        ]
+      }
+    },
+    {
+      "id": "TEST_045",
+      "category": "generation",
+      "question": "How much did depreciation, amortization and impairment grow YoY from Q3 2023 to Q3 2024, in exact millions?",
+      "expected_retrieval": {
+        "page": 28,
+        "table_or_section": "Statement of Cash Flows – Operating activities"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Increased by 113 million USD (1,348 vs 1,235).",
+        "must_include": [
+          "113"
+        ],
+        "must_not_include": [
+          "1,278"
+        ]
+      }
+    },
+    {
+      "id": "TEST_046",
+      "category": "generation",
+      "question": "What is the CEO's total compensation for 2024?",
+      "expected_retrieval": {
+        "page": null,
+        "table_or_section": "N/A - not in document"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Not answerable: executive compensation is not covered in this update.",
+        "must_include": [
+          "not provided"
+        ],
+        "must_not_include": [
+          "$"
+        ]
+      }
+    },
+    {
+      "id": "TEST_047",
+      "category": "generation",
+      "question": "What will be the retail price of Tesla's new, more affordable vehicle model?",
+      "expected_retrieval": {
+        "page": null,
+        "table_or_section": "Outlook – Product (only timing given: H1 2025)"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Not answerable: no price is given; the update only states production starts in the first half of 2025.",
+        "must_include": [
+          "not provided",
+          "first half of 2025"
+        ],
+        "must_not_include": [
+          "$25,000",
+          "$30,000"
+        ]
+      }
+    },
+    {
+      "id": "TEST_048",
+      "category": "generation",
+      "question": "How many vehicles did BYD deliver in Q3 2024?",
+      "expected_retrieval": {
+        "page": null,
+        "table_or_section": "N/A - not in document"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Not answerable: competitor data is not in the document.",
+        "must_include": [
+          "not provided"
+        ],
+        "must_not_include": [
+          "BYD delivered"
+        ]
+      }
+    },
+    {
+      "id": "TEST_049",
+      "category": "generation",
+      "question": "What exact number of vehicles will Tesla deliver in full-year 2025?",
+      "expected_retrieval": {
+        "page": null,
+        "table_or_section": "Outlook – Volume (2024 'slight growth' only; no 2025 figure)"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Not answerable: Tesla gives no 2025 delivery figure; the outlook only mentions slight growth in 2024.",
+        "must_include": [
+          "not provided"
+        ],
+        "must_not_include": [
+          "will deliver"
+        ]
+      }
+    },
+    {
+      "id": "TEST_050",
+      "category": "generation",
+      "question": "What dollar amount of FSD revenue was recognized in Q3 2024?",
+      "expected_retrieval": {
+        "page": null,
+        "table_or_section": "Financial Summary – Revenue (qualitative mention only)"
+      },
+      "expected_generation": {
+        "ground_truth_answer": "Not answerable: the update cites higher FSD revenue recognition but gives no dollar amount.",
+        "must_include": [
+          "not provided"
+        ],
+        "must_not_include": [
+          "million USD of FSD revenue"
+        ]
+      }
+    }
+  ]
+}

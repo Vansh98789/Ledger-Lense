@@ -1,0 +1,1198 @@
+{
+  "summary": {
+    "timestamp": "2026-11-28T13:34:27.555470",
+    "split": "dev",
+    "tag": "baseline",
+    "total_tests": 14,
+    "total_time_seconds": 562.2,
+    "avg_latency_seconds": 40.16,
+    "metrics": {
+      "retrieval_hit_at_5_pct": 52.0,
+      "retrieval_mrr": 0.285,
+      "correctness_pct": 48.0,
+      "faithfulness_pct": 56.0
+    },
+    "counts": {
+      "retrieval_hits": "26/50",
+      "correctness_passes": "12/25",
+      "faithfulness_passes": "14/25"
+    }
+  },
+  "results": [
+    {
+      "id": "TC_001",
+      "test_stage": "retrieval",
+      "question": "What was Total Automotive Revenues in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        4,
+        3,
+        5,
+        7,
+        31
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 2.03
+    },
+    {
+      "id": "TC_002",
+      "test_stage": "retrieval",
+      "question": "What was Total Energy Generation and Storage Revenue in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        9,
+        5,
+        4,
+        3,
+        10
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.5
+    },
+    {
+      "id": "TC_003",
+      "test_stage": "retrieval",
+      "question": "What was Total Services and Other Revenue in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        5,
+        3,
+        4,
+        9,
+        7
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 2.13
+    },
+    {
+      "id": "TC_004",
+      "test_stage": "retrieval",
+      "question": "What was Tesla's Total Revenue in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        7,
+        31,
+        3,
+        9,
+        4
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.2,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.59
+    },
+    {
+      "id": "TC_005",
+      "test_stage": "retrieval",
+      "question": "What was Total Gross Profit in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        3,
+        9,
+        4,
+        5,
+        7
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.67
+    },
+    {
+      "id": "TC_006",
+      "test_stage": "retrieval",
+      "question": "What was Total GAAP Gross Margin in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        3,
+        9,
+        4,
+        7,
+        5
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.94
+    },
+    {
+      "id": "TC_007",
+      "test_stage": "retrieval",
+      "question": "What was Income from Operations in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        3,
+        5,
+        30,
+        1,
+        7
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.72
+    },
+    {
+      "id": "TC_008",
+      "test_stage": "retrieval",
+      "question": "What was Operating Margin in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        3,
+        5,
+        9,
+        7,
+        1
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.62
+    },
+    {
+      "id": "TC_009",
+      "test_stage": "retrieval",
+      "question": "What was Adjusted EBITDA in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        31,
+        1,
+        6,
+        3,
+        29
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.68
+    },
+    {
+      "id": "TC_010",
+      "test_stage": "retrieval",
+      "question": "What was diluted GAAP EPS attributable to common stockholders in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        31,
+        30,
+        3,
+        31,
+        4
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.2,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.56
+    },
+    {
+      "id": "TC_011",
+      "test_stage": "retrieval",
+      "question": "How much net cash was provided by operating activities in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        3,
+        30,
+        30,
+        28,
+        5
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.51
+    },
+    {
+      "id": "TC_012",
+      "test_stage": "retrieval",
+      "question": "What were Capital Expenditures in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        3,
+        1,
+        30,
+        4,
+        7
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.25,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.6
+    },
+    {
+      "id": "TC_013",
+      "test_stage": "retrieval",
+      "question": "What was Free Cash Flow in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        3,
+        5,
+        1,
+        30,
+        31
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.44
+    },
+    {
+      "id": "TC_014",
+      "test_stage": "retrieval",
+      "question": "How many Model 3/Y vehicles were produced in Q3 2024?",
+      "expected_page": 6,
+      "retrieved_pages": [
+        7,
+        10,
+        8,
+        3,
+        6
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.2,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.41
+    },
+    {
+      "id": "TC_015",
+      "test_stage": "retrieval",
+      "question": "How many total vehicles were delivered in Q3 2024?",
+      "expected_page": 6,
+      "retrieved_pages": [
+        7,
+        3,
+        10,
+        31,
+        9
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.34
+    },
+    {
+      "id": "TC_016",
+      "test_stage": "retrieval",
+      "question": "How many Other Models were delivered in Q3 2024?",
+      "expected_page": 6,
+      "retrieved_pages": [
+        7,
+        3,
+        10,
+        8,
+        1
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.2
+    },
+    {
+      "id": "TC_017",
+      "test_stage": "retrieval",
+      "question": "What was global vehicle inventory in days of supply in Q3 2024?",
+      "expected_page": 6,
+      "retrieved_pages": [
+        31,
+        6,
+        7,
+        10,
+        3
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.5,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.36
+    },
+    {
+      "id": "TC_018",
+      "test_stage": "retrieval",
+      "question": "How much energy storage was deployed in Q3 2024?",
+      "expected_page": 6,
+      "retrieved_pages": [
+        9,
+        10,
+        3,
+        6,
+        8
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.25,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.34
+    },
+    {
+      "id": "TC_019",
+      "test_stage": "retrieval",
+      "question": "How many Supercharger connectors did Tesla have at the end of Q3 2024?",
+      "expected_page": 6,
+      "retrieved_pages": [
+        8,
+        9,
+        7,
+        6,
+        1
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.25,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.14
+    },
+    {
+      "id": "TC_020",
+      "test_stage": "retrieval",
+      "question": "What was the installed annual capacity for Model 3/Y at the Shanghai factory?",
+      "expected_page": 7,
+      "retrieved_pages": [
+        7,
+        10,
+        9,
+        8,
+        3
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.18
+    },
+    {
+      "id": "TC_021",
+      "test_stage": "retrieval",
+      "question": "What H100 cluster size was deployed at Gigafactory Texas in Q3 2024?",
+      "expected_page": 8,
+      "retrieved_pages": [
+        8,
+        7,
+        3,
+        1,
+        9
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.34
+    },
+    {
+      "id": "TC_022",
+      "test_stage": "retrieval",
+      "question": "What was the Q3 2024 Energy business gross margin?",
+      "expected_page": 9,
+      "retrieved_pages": [
+        9,
+        3,
+        3,
+        7,
+        5
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.32
+    },
+    {
+      "id": "TC_023",
+      "test_stage": "retrieval",
+      "question": "How many Powerwalls were enrolled in Virtual Power Plant programs as of Q3 2024?",
+      "expected_page": 9,
+      "retrieved_pages": [
+        9,
+        3,
+        8,
+        1,
+        29
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.33
+    },
+    {
+      "id": "TC_024",
+      "test_stage": "retrieval",
+      "question": "What does the chart on page 23 call its quarterly cash flow metrics?",
+      "expected_page": 23,
+      "retrieved_pages": [
+        31,
+        4,
+        6,
+        7,
+        9
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.84
+    },
+    {
+      "id": "TC_025",
+      "test_stage": "retrieval",
+      "question": "What was Tesla's total assets balance at September 30, 2024?",
+      "expected_page": 27,
+      "retrieved_pages": [
+        31,
+        7,
+        9,
+        10,
+        1
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "N/A (Retrieval Only)",
+      "correctness": null,
+      "faithfulness": null,
+      "latency_seconds": 1.37
+    },
+    {
+      "id": "TC_026",
+      "test_stage": "generation",
+      "question": "Calculate Q3 2024 total revenue from automotive, energy generation and storage, and services and other revenue.",
+      "expected_page": 4,
+      "retrieved_pages": [
+        5,
+        9,
+        4,
+        3,
+        1
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "generated_answer": "The sum of Q3\u202f2024 automotive ($20,016\u202fM), energy generation and storage ($2,376\u202fM), and services and other ($2,790\u202fM) revenues is $25,182\u202fmillion, i.e., about $25.2\u202fbillion.",
+      "ground_truth": "25,182 million USD (20,016 + 2,376 + 2,790).",
+      "correctness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer correctly calculates the total revenue using the exact figures provided in the ground truth without rounding the final required answer to a coarse billion."
+      },
+      "faithfulness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "All revenue figures and their arithmetic sum are directly supported by the retrieved context tables and text."
+      },
+      "latency_seconds": 7.05
+    },
+    {
+      "id": "TC_027",
+      "test_stage": "generation",
+      "question": "Calculate the Q3 2024 year-over-year increase in total revenue in dollars using Q3 2023 and Q3 2024 values.",
+      "expected_page": 4,
+      "retrieved_pages": [
+        4,
+        3,
+        29,
+        5,
+        1
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "The total revenue increased by $1,832\u202fmillion YoY (from $23,350\u202fmillion in Q3\u202f2023 to $25,182\u202fmillion in Q3\u202f2024).",
+      "ground_truth": "1,832 million USD (25,182 \u2212 23,350).",
+      "correctness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer accurately calculates the exact year-over-year increase in total revenue with precise figures matching the ground truth."
+      },
+      "faithfulness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer accurately reflects the total revenue numbers from the table in the context (Q3 2023: 23,350 million; Q3 2024: 25,182 million) and performs correct arithmetic for the YoY difference ($1,832 million), which is fully supported by the retrieved data."
+      },
+      "latency_seconds": 4.72
+    },
+    {
+      "id": "TC_028",
+      "test_stage": "generation",
+      "question": "What percentage year-over-year growth in total revenue did Tesla report for Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        7,
+        9,
+        3,
+        10,
+        5
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "Tesla reported an 8% year-over-year increase in total revenue for Q3 2024.",
+      "ground_truth": "8%.",
+      "correctness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer correctly states the 8% year-over-year revenue growth for Tesla in Q3 2024 as provided in the ground truth."
+      },
+      "faithfulness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer is fully supported by the retrieved context, which states that total revenue increased 8% YoY in Q3 to $25.2B."
+      },
+      "latency_seconds": 3.75
+    },
+    {
+      "id": "TC_029",
+      "test_stage": "generation",
+      "question": "Calculate the Q3 2024 total automotive revenue from automotive sales, regulatory credits, and automotive leasing.",
+      "expected_page": 26,
+      "retrieved_pages": [
+        5,
+        4,
+        3,
+        31,
+        7
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "$20.016\u202fbillion (i.e., $20,016\u202fmillion) was the total automotive revenue for Q3\u202f2024.",
+      "ground_truth": "20,016 million USD (18,831 + 739 + 446).",
+      "correctness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer provides the exact financial figure in millions and billions without rounding away the precision required."
+      },
+      "faithfulness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The total automotive revenue for Q3 2024 is explicitly stated as 20,016 million ($20.016 billion) in the provided table."
+      },
+      "latency_seconds": 23.37
+    },
+    {
+      "id": "TC_030",
+      "test_stage": "generation",
+      "question": "How much of Q3 2024 automotive revenue came from regulatory credits?",
+      "expected_page": 26,
+      "retrieved_pages": [
+        5,
+        3,
+        4,
+        7,
+        1
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "Not found in the document.",
+      "ground_truth": "739 million USD.",
+      "correctness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer incorrectly stated the information was not found, whereas the ground truth provided an exact figure of 739 million USD."
+      },
+      "faithfulness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer states the information was not found, but the retrieved context contains extensive financial, operational, and vehicle capacity summaries for Q3 2024."
+      },
+      "latency_seconds": 27.54
+    },
+    {
+      "id": "TC_031",
+      "test_stage": "generation",
+      "question": "Compare Q3 2024 automotive revenue with Q2 2024. What was the sequential change?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        4,
+        3,
+        7,
+        5,
+        1
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "Automotive revenue was $20,016\u202fmillion in Q3\u202f2024, up from $19,878\u202fmillion in Q2\u202f2024 \u2013 a sequential increase of $138\u202fmillion.",
+      "ground_truth": "An increase of 138 million USD (20,016 \u2212 19,878).",
+      "correctness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer accurately reflects the exact figures and the sequential increase stated in the ground truth."
+      },
+      "faithfulness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "All numbers and claims in the generated answer are fully grounded in the provided context (Chunk 0)."
+      },
+      "latency_seconds": 23.76
+    },
+    {
+      "id": "TC_032",
+      "test_stage": "generation",
+      "question": "Compare energy generation and storage revenue in Q3 2024 with Q2 2024. What was the sequential change?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        9,
+        5,
+        3,
+        10,
+        29
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "Not found in the document.",
+      "ground_truth": "A decrease of 638 million USD (2,376 \u2212 3,014).",
+      "correctness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer incorrectly states the information was not found, whereas the ground truth provides the sequential change of a decrease of 638 million USD."
+      },
+      "faithfulness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer incorrectly states that the information is not found in the document, whereas the retrieved context contains extensive details about Tesla's financials, energy business, and operations in Q3."
+      },
+      "latency_seconds": 19.73
+    },
+    {
+      "id": "TC_033",
+      "test_stage": "generation",
+      "question": "Calculate the Q3 2024 gross profit margin from total gross profit and total revenue, and state the reported margin.",
+      "expected_page": 4,
+      "retrieved_pages": [
+        3,
+        4,
+        9,
+        5,
+        7
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.5,
+      "generated_answer": "Using the Q3 2024 figures, total gross profit is $4,997\u202fmillion and total revenue is $25,182\u202fmillion, giving a gross profit margin of about 19.8%. This matches the reported GAAP gross margin of 19.8% for Q3 2024.",
+      "ground_truth": "Approximately 19.8% (4,997 \u00f7 25,182); the reported GAAP gross margin is 19.8%.",
+      "correctness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer accurately calculates and states the Q3 2024 gross profit margin using the exact figures from the ground truth."
+      },
+      "faithfulness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "All figures (total gross profit of $4,997 million, total revenue of $25,182 million, and GAAP gross margin of 19.8% for Q3 2024) are directly supported by the text in Chunk 1 and Chunk 3, and the calculation is mathematically correct."
+      },
+      "latency_seconds": 27.93
+    },
+    {
+      "id": "TC_034",
+      "test_stage": "generation",
+      "question": "Calculate the Q3 2024 operating income increase over Q3 2023 in dollars.",
+      "expected_page": 4,
+      "retrieved_pages": [
+        3,
+        5,
+        30,
+        30,
+        6
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "Not found in the document.",
+      "ground_truth": "953 million USD (2,717 \u2212 1,764).",
+      "correctness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer incorrectly states the information was not found, whereas the ground truth provides the exact calculation of 953 million USD."
+      },
+      "faithfulness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The assistant failed to provide the information, even though the context contains extensive data on Q3 performance, financials, production, and deliveries."
+      },
+      "latency_seconds": 33.67
+    },
+    {
+      "id": "TC_035",
+      "test_stage": "generation",
+      "question": "How much did operating expenses change year over year in Q3 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        3,
+        5,
+        7,
+        30,
+        10
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "Not found in the document.",
+      "ground_truth": "They decreased by 134 million USD, from 2,414 million to 2,280 million; reported YoY change is \u22126%.",
+      "correctness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer correctly identifies that the information was not found in the document, matching the unanswerable query protocol."
+      },
+      "faithfulness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer incorrectly claims the information was not found, but the provided context actually contains extensive information across multiple sections (Summary, Financials, Outlook, etc.)."
+      },
+      "latency_seconds": 27.24
+    },
+    {
+      "id": "TC_036",
+      "test_stage": "generation",
+      "question": "Calculate the difference between Q3 2024 non-GAAP and GAAP net income attributable to common stockholders.",
+      "expected_page": 4,
+      "retrieved_pages": [
+        31,
+        3,
+        30,
+        31,
+        1
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "$0.3\u202fbillion (approximately $300\u202fmillion) higher non\u2011GAAP net income than GAAP net income in Q3\u202f2024.",
+      "ground_truth": "338 million USD (2,505 \u2212 2,167).",
+      "correctness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer uses rounded figures ('$0.3 billion' / 'approximately $300 million') instead of the precise ground truth figure of 338 million USD."
+      },
+      "faithfulness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The context states GAAP net income in Q3 was $2.2B and non-GAAP net income in Q3 was $2.5B, making the difference $0.3 billion (or $300 million), which is fully supported."
+      },
+      "latency_seconds": 26.28
+    },
+    {
+      "id": "TC_037",
+      "test_stage": "generation",
+      "question": "What was the difference between Q3 2024 diluted non-GAAP EPS and diluted GAAP EPS?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        31,
+        3,
+        1,
+        4,
+        30
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.25,
+      "generated_answer": "The diluted non\u2011GAAP EPS was $0.72 versus a diluted GAAP EPS of $0.62, a difference of $0.10.",
+      "ground_truth": "$0.10 per share ($0.72 \u2212 $0.62).",
+      "correctness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer accurately provides the diluted non-GAAP EPS, diluted GAAP EPS, and the correct difference of $0.10 matching the ground truth."
+      },
+      "faithfulness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer accurately reflects the diluted non-GAAP EPS of $0.72 and diluted GAAP EPS of $0.62 found in Chunk 3, and performs the correct simple subtraction to find the difference of $0.10."
+      },
+      "latency_seconds": 42.58
+    },
+    {
+      "id": "TC_038",
+      "test_stage": "generation",
+      "question": "Verify Q3 2024 free cash flow using operating cash flow less capital expenditures.",
+      "expected_page": 28,
+      "retrieved_pages": [
+        3,
+        30,
+        1,
+        3,
+        5
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "The Q3 2024 free cash flow is $2.7\u202fB, which aligns with operating cash flow of $6.3\u202fB less capital expenditures of about $3.5\u202fB (6.3\u202fB \u2013 3.5\u202fB \u2248 2.7\u202fB).",
+      "ground_truth": "2,742 million USD (6,255 \u2212 3,513).",
+      "correctness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer rounds the figures to billions ($2.7B, $6.3B, $3.5B) instead of providing the exact million-dollar figures required for financial precision."
+      },
+      "faithfulness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer accurately reflects the Q3 2024 free cash flow ($2.7B), operating cash flow ($6.3B), and capital expenditures (~$3.5B) found in the text and performs the correct subtraction derived strictly from the context."
+      },
+      "latency_seconds": 40.06
+    },
+    {
+      "id": "TC_039",
+      "test_stage": "generation",
+      "question": "How did Q3 2024 free cash flow compare with Q2 2024?",
+      "expected_page": 4,
+      "retrieved_pages": [
+        3,
+        4,
+        6,
+        29,
+        31
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.5,
+      "generated_answer": "Free cash flow was $2.7\u202fbillion in Q3\u202f2024, up from $1.342\u202fbillion in Q2\u202f2024 \u2013 an increase of roughly $1.4\u202fbillion.",
+      "ground_truth": "It increased by 1,400 million USD (2,742 \u2212 1,342).",
+      "correctness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer rounds the Q3 2024 free cash flow to $2.7 billion instead of preserving the exact figure of $2,742 million from the ground truth."
+      },
+      "faithfulness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "All numbers and claims regarding free cash flow for Q3 2024 ($2.7B / $2,742M) and Q2 2024 ($1,342M) are directly supported by the text in the retrieved context."
+      },
+      "latency_seconds": 40.32
+    },
+    {
+      "id": "TC_040",
+      "test_stage": "generation",
+      "question": "Calculate the Q3 2024 total vehicle deliveries from Model 3/Y and other models deliveries.",
+      "expected_page": 6,
+      "retrieved_pages": [
+        7,
+        3,
+        10,
+        31,
+        5
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "Not found in the document.",
+      "ground_truth": "462,890 vehicles (439,975 + 22,915).",
+      "correctness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer incorrectly stated that the information was not found, whereas the ground truth provided the calculation and total deliveries."
+      },
+      "faithfulness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer incorrectly claims the information was not found, whereas the prompt did not specify a question, or if evaluated generally, the context contains abundant information that could be summarized."
+      },
+      "latency_seconds": 39.45
+    },
+    {
+      "id": "TC_041",
+      "test_stage": "generation",
+      "question": "What was the Q3 2024 year-over-year increase in total vehicle deliveries, in units?",
+      "expected_page": 6,
+      "retrieved_pages": [
+        7,
+        3,
+        10,
+        5,
+        1
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "Not found in the document.",
+      "ground_truth": "27,831 vehicles (462,890 \u2212 435,059).",
+      "correctness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer incorrectly stated the information was not found, whereas the ground truth provided the exact delivery increase of 27,831 vehicles."
+      },
+      "faithfulness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer incorrectly states that the information was not found, whereas the provided context contains extensive details regarding vehicle capacity, financial summaries, production volumes, and outlooks."
+      },
+      "latency_seconds": 39.53
+    },
+    {
+      "id": "TC_042",
+      "test_stage": "generation",
+      "question": "How many more Model 3/Y vehicles than other-model vehicles were delivered in Q3 2024?",
+      "expected_page": 6,
+      "retrieved_pages": [
+        7,
+        10,
+        3,
+        8,
+        1
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "Not found in the document.",
+      "ground_truth": "417,060 vehicles (439,975 \u2212 22,915).",
+      "correctness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer incorrectly stated the information was not found, whereas the ground truth provided the calculation and exact figure."
+      },
+      "faithfulness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The assistant claimed the information was not found, but the provided context actually contains extensive details about Tesla's operations, vehicle capacity, financial results, and technology."
+      },
+      "latency_seconds": 39.48
+    },
+    {
+      "id": "TC_043",
+      "test_stage": "generation",
+      "question": "Compare Q3 2024 total production with total deliveries. How many more vehicles were produced than delivered?",
+      "expected_page": 6,
+      "retrieved_pages": [
+        7,
+        3,
+        10,
+        1,
+        31
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "Not found in the document.",
+      "ground_truth": "6,906 vehicles (469,796 \u2212 462,890).",
+      "correctness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer incorrectly stated that the information was not found in the document, whereas the ground truth provides the exact calculation."
+      },
+      "faithfulness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer incorrectly states 'Not found in the document', but the prompt did not ask a specific question, and the provided context contains extensive information about Tesla's Q3 2024 results."
+      },
+      "latency_seconds": 40.02
+    },
+    {
+      "id": "TC_044",
+      "test_stage": "generation",
+      "question": "What does Tesla's definition of vehicle deliveries include, and what does it exclude or require?",
+      "expected_page": 31,
+      "retrieved_pages": [
+        31,
+        31,
+        31,
+        6,
+        3
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "Tesla defines vehicle deliveries as only those vehicles that have been transferred to end customers with all paperwork correctly completed. Vehicles that have not been transferred or have incomplete paperwork are not counted as deliveries.",
+      "ground_truth": "Only vehicles transferred to end customers with all paperwork correctly completed.",
+      "correctness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer accurately reflects the ground truth definition of Tesla's vehicle deliveries without losing necessary detail."
+      },
+      "faithfulness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The context states that vehicle deliveries include only vehicles transferred to end customers with all paperwork correctly completed, but it does not contain the negative assertion that vehicles not transferred or with incomplete paperwork are not counted."
+      },
+      "latency_seconds": 40.32
+    },
+    {
+      "id": "TC_045",
+      "test_stage": "generation",
+      "question": "Explain how Tesla defines free cash flow in this update.",
+      "expected_page": 31,
+      "retrieved_pages": [
+        31,
+        31,
+        31,
+        31,
+        3
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 1.0,
+      "generated_answer": "Tesla defines free cash flow as operating cash flow less capital expenditures.",
+      "ground_truth": "Operating cash flow less capital expenditures.",
+      "correctness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer accurately matches the ground truth definition of free cash flow provided."
+      },
+      "faithfulness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer accurately reflects the definition of free cash flow provided in the retrieved context."
+      },
+      "latency_seconds": 38.95
+    },
+    {
+      "id": "TC_046",
+      "test_stage": "generation",
+      "question": "Calculate Q3 2024 total current assets less total current liabilities.",
+      "expected_page": 27,
+      "retrieved_pages": [
+        1,
+        3,
+        31,
+        4,
+        29
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "Not found in the document.",
+      "ground_truth": "25,802 million USD (56,379 \u2212 30,577).",
+      "correctness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer incorrectly stated the information was not found, whereas the ground truth provided the exact calculation resulting in 25,802 million USD."
+      },
+      "faithfulness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The user asked a question (which is missing in the prompt, but the assistant's answer claims 'Not found in the document'), but the context actually contains extensive financial and operational information about Tesla's Q3 2024 update, making the 'Not found' response incorrect."
+      },
+      "latency_seconds": 39.78
+    },
+    {
+      "id": "TC_047",
+      "test_stage": "generation",
+      "question": "Calculate total debt and finance leases at September 30, 2024 by combining current and non-current portions.",
+      "expected_page": 27,
+      "retrieved_pages": [
+        31,
+        7,
+        30,
+        10,
+        3
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "Not found in the document.",
+      "ground_truth": "7,696 million USD (2,291 + 5,405).",
+      "correctness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer incorrectly stated the information was not found, whereas the ground truth provided the calculation and total of 7,696 million USD."
+      },
+      "faithfulness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer incorrectly states 'Not found in the document', whereas the context contains extensive financial, operational, and vehicle capacity information that could be used to answer various questions."
+      },
+      "latency_seconds": 40.49
+    },
+    {
+      "id": "TC_048",
+      "test_stage": "generation",
+      "question": "How did cash, cash equivalents and investments change from June 30 to September 30, 2024?",
+      "expected_page": 27,
+      "retrieved_pages": [
+        3,
+        31,
+        30,
+        3,
+        30
+      ],
+      "retrieval_hit": false,
+      "reciprocal_rank": 0.0,
+      "generated_answer": "Cash, cash equivalents and investments increased by $2.9\u202fbillion from June\u202f30\u202f2024 to September\u202f30\u202f2024, reaching $33.6\u202fbillion at the end of Q3\u202f2024.",
+      "ground_truth": "Increased by 2,928 million USD (33,648 \u2212 30,720).",
+      "correctness": {
+        "verdict": "FAIL",
+        "score": 0.0,
+        "reason": "The generated answer rounds the financial figures to billions ($2.9 billion, $33.6 billion) instead of providing the exact figures in millions as required by financial precision rules."
+      },
+      "faithfulness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer is fully supported by Chunk 3, which states there was a '$2.9B increase in our cash and investments in Q3 to $33.6B' (with Q3 corresponding to the period ending September 30, 2024)."
+      },
+      "latency_seconds": 40.49
+    },
+    {
+      "id": "TC_049",
+      "test_stage": "generation",
+      "question": "Summarize Tesla's stated 2024 delivery and energy-storage deployment outlook without treating it as a reported result.",
+      "expected_page": 10,
+      "retrieved_pages": [
+        31,
+        31,
+        31,
+        10,
+        9
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.25,
+      "generated_answer": "Tesla says it expects a modest increase in vehicle deliveries in 2024 and projects that energy\u2011storage deployments will more than double year\u2011over\u2011year in 2024.",
+      "ground_truth": "Tesla expected slight growth in vehicle deliveries in 2024 and expected energy storage deployments to more than double year over year.",
+      "correctness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer accurately captures Tesla's outlook for 2024 vehicle deliveries and energy-storage deployments as stated in the ground truth without presenting them as reported results."
+      },
+      "faithfulness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer is fully supported by the text in Chunk 3, which states that Tesla expects 'slight growth in vehicle deliveries in 2024' (modest increase) and that 'Energy storage deployments are expected to more than double year-over-year in 2024'."
+      },
+      "latency_seconds": 40.42
+    },
+    {
+      "id": "TC_050",
+      "test_stage": "generation",
+      "question": "What timing did Tesla give for start of production of its new, more affordable vehicle models?",
+      "expected_page": 10,
+      "retrieved_pages": [
+        7,
+        31,
+        31,
+        10,
+        3
+      ],
+      "retrieval_hit": true,
+      "reciprocal_rank": 0.25,
+      "generated_answer": "Tesla said the start of production for its new, more affordable vehicle models is planned for the first half of 2025.",
+      "ground_truth": "The first half of 2025.",
+      "correctness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer accurately matches the ground truth timing for the start of production."
+      },
+      "faithfulness": {
+        "verdict": "PASS",
+        "score": 1.0,
+        "reason": "The generated answer is fully supported by the provided text, which states that plans for new vehicles, including more affordable models, remain on track for start of production in the first half of 2025."
+      },
+      "latency_seconds": 40.21
+    }
+  ]
+}
