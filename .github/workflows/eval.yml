@@ -1,0 +1,52 @@
+name: RAG Evaluation & Quality Gate
+
+on:
+  pull_request:
+    paths:
+      - 'backend/app/retrieval/**'
+      - 'backend/app/chunking/**'
+      - 'backend/app/extraction/**'
+      - 'backend/app/prompts/**'
+      - 'backend/app/embedding.py'
+      - 'backend/app/extract_data.py'
+      - 'backend/app/clean_data.py'
+      - 'backend/app/ingestion.py'
+      - 'evals/**'
+  workflow_dispatch: # Allows manual trigger from GitHub UI anytime
+
+jobs:
+  evaluate-rag:
+    name: Run RAG Evaluation & Regression Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: Install System Dependencies (Tesseract OCR)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-eng
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r backend/requirements.txt
+          pip install langchain-google-genai rank-bm25 fastembed
+
+      - name: Run RAG Evaluation (Step 5 Harness)
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python evals/step_5_results/run_evals.py --split dev --tag ci_run
+
+      - name: Run Quality Gate Check (Step 6 Guard)
+        run: |
+          python evals/step_6_ci_guard/regression_check.py
